@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<unit type="being" slot="1">
+	<object file="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley"/>
+	<dependencies>
+		<depends_on bnk="soundbanks/regular_vox" />
+	</dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="base" class="PlayerBodyBoneMergeBase">
+			<var name="original_material" value="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" />
+			<var name="contour_material" value="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" />
+		</extension>
+		<extension name="contour" class="ContourExt"/>
+	</extensions>
+
+</unit>

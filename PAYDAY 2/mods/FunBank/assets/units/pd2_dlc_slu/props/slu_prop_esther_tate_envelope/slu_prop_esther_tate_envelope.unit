@@ -1,0 +1,6 @@
+<unit type="slu" slot="1">
+	<object file="units/pd2_dlc_slu/props/slu_prop_esther_tate_envelope/slu_prop_esther_tate_envelope" />
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+	</extensions>
+</unit>

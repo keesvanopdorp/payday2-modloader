@@ -1,0 +1,12 @@
+<materials version="3">
+    <material name="mat_bench" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_bench_leather/chl_prop_livingroom_bench_leather_df" mip="1"/>
+        <bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_bench_leather/chl_prop_livingroom_bench_leather_nm" mip="3"/>
+        <reflection_texture type="cubemap" file="units/payday2/cubemaps/cubemap_steel"/>
+    </material>
+    <material name="mat_bench_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture mip="4" file="units/pd2_dlc_chill/props/chl_prop_livingroom_bench_leather/chl_prop_livingroom_bench_leather_df"/>
+        <bump_normal_texture mip="4" file="units/pd2_dlc_chill/props/chl_prop_livingroom_bench_leather/chl_prop_livingroom_bench_leather_nm"/>
+    </material>
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

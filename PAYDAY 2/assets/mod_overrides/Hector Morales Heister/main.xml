@@ -1,0 +1,28 @@
+<table name="Hector Morales Heister">
+	<AssetUpdates id="" version="3" provider="modworkshop" use_local_dir="true" use_local_path="true"/>
+	<Localization directory="Loc" default="EN.json"/>
+	<Character id="hector_morales" based_on="bodhi" unit="units/pd2_dlc_hector_morales/characters/npc_hector_morales/npc_hector_morales" fps_unit="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" default_mask="hectors_helmet">
+		<character speech_prefix="rb_hector"/>
+		<blackmarket desc_id="heist_contact_hector_description" texture_bundle_folder="hector_morales"/>
+		<gui post_event="pln_contact_hector">
+			<videos>
+				<value_node value="hector"/>
+			</videos>
+		</gui>
+		<masks x="0" y="0" z="-0.3"/>
+	</Character>
+	
+	<AddFiles directory="Assets">
+		<unit path="units/pd2_dlc_hector_morales/characters/npc_hector_morales/npc_hector_morales" force="true"/>
+		<object path="units/pd2_dlc_hector_morales/characters/npc_hector_morales/npc_hector_morales" force="true"/>
+		<cooked_physics path="units/pd2_dlc_hector_morales/characters/npc_hector_morales/npc_hector_morales" force="true"/>
+		<material_config path="units/pd2_dlc_hector_morales/characters/npc_hector_morales/npc_hector_morales" force="true"/>
+		<model path="units/pd2_dlc_hector_morales/characters/npc_hector_morales/npc_hector_morales" force="true"/>
+		<texture path="guis/dlcs/hector_morales/textures/pd2/blackmarket/icons/characters/hector_morales" force="true"/>
+		<unit path="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" force="true"/>
+		<object path="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" force="true"/>
+		<cooked_physics path="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" force="true"/>
+		<material_config path="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" force="true"/>
+		<model path="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" force="true"/>
+	</AddFiles>
+</table>

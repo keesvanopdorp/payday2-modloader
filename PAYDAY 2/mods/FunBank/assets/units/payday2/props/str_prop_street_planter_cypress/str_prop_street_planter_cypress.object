@@ -1,0 +1,28 @@
+ <?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress" orientation_object="rp_str_prop_street_planter_cypress" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_str_prop_street_planter_cypress" />
+			<object name="c_capsule_01" collision_type="capsule" padding="-2.5"/>
+			<object name="c_capsule_02" collision_type="capsule" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces default_material="foliage">
+		<decal_mesh name="dm_pot" enabled="true" material="stone" />
+		<decal_mesh name="dm_leaf" enabled="true" material="foliage" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="lod_leaf">
+			<object name="g_leaf_lod0" enabled="true"  max_distance="2500"  />
+			<object name="g_leaf_lod1" enabled="true"  max_distance="4000" />
+			<object name="g_leaf_lod2" enabled="true" />
+		</lod_object>
+		<lod_object name="lod_pot">
+			<object name="g_pot_lod0" enabled="true"  max_distance="2500"  />
+			<object name="g_pot_lod1" enabled="true"  max_distance="4000"  />
+			<object name="g_pot_lod2" enabled="true" />
+		</lod_object>
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

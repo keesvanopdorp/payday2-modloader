@@ -1,0 +1,49 @@
+{
+		"menu_id" : "bl_menu_team_id",
+		"parent_menu_id" : "bl_menu_id",
+		"title" : "bl_menu_team",
+		"description" : "bl_menu_team_desc",
+		"items" : [
+		{
+			"type" : "slider",
+			"id" : "bl_team_scale",
+			"title" : "bl_scale",
+			"description" : "bl_scale_desc",
+			"callback" : "callback_bl_team_scale",
+			"value" : "team_scale",
+			"max" : 1.5,
+			"min" : 0.5,
+			"step" : 0.01,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "bl_team_prefix",
+			"title" : "bl_prefix",
+			"description" : "bl_prefix_desc",
+			"callback" : "callback_bl_team_prefix",
+			"items" : [
+				"prefix_deck_level",
+				"prefix_player_level",
+				"prefix_set_1",
+				"prefix_set_2"
+			],
+			"value" : "team_prefix",
+		},
+		{	
+			"type" : "toggle",
+			"id" : "bl_hide",
+			"title" : "bl_hide",
+			"description" : "bl_hide_desc",
+			"callback" : "callback_bl_hide_team",
+			"value" : "hide_team",
+		},
+		{	
+			"type" : "toggle",
+			"id" : "bl_name_color",
+			"title" : "bl_team_name_color",
+			"description" : "bl_team_name_color_desc",
+			"callback" : "callback_team_name_color",
+			"value" : "name",
+		}
+	]
+}

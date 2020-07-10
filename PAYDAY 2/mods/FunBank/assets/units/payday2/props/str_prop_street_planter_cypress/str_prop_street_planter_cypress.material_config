@@ -1,0 +1,21 @@
+<materials version="3">
+    <material name="str_prop_street_planter_cypress" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_df"/>
+        <bump_normal_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_nm"/>
+        <variable value="0.079999998211861" type="scalar" name="alpha_ref"/>
+    </material>
+    <material name="mtr_pot" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_df"/>
+        <bump_normal_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_nm"/>
+    </material>
+    <material name="str_prop_street_planter_cypress_lod1" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_df" mip="4"/>
+        <bump_normal_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_nm" mip="4"/>
+        <variable value="0.079999998211861" type="scalar" name="alpha_ref"/>
+    </material>
+    <material name="mtr_pot_lod1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_df" mip="2"/>
+        <bump_normal_texture file="units/payday2/props/str_prop_street_planter_cypress/str_prop_street_planter_cypress_nm" mip="4"/>
+    </material>	
+	<material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

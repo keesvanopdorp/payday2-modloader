@@ -1,0 +1,34 @@
+<xml>
+	<anim	name="anim_sprint"				file="anims/pd2_dlc_peta/goat_anims/sprint"					blend_set="all"/>
+	<anim	name="anim_walk_loop_01"		file="anims/level/chill/goat/anim_goat_walk_loop_01"		blend_set="all"/>
+	<anim	name="anim_walk_loop_02"		file="anims/level/chill/goat/anim_goat_walk_loop_02"		blend_set="all"/>
+	<anim	name="anim_walk_loop_03"		file="anims/level/chill/goat/anim_goat_walk_loop_03"		blend_set="all"/>
+	<anim	name="anim_walk_fwd"			file="anims/pd2_dlc_peta/goat_anims/walk_fwd"				blend_set="all"/>
+	<anim	name="anim_back"				file="anims/pd2_dlc_peta/goat_anims/back"					blend_set="all"/>
+	<anim	name="anim_eat"					file="anims/pd2_dlc_peta/goat_anims/eat"					blend_set="all"/>
+	<anim	name="anim_jump"				file="anims/pd2_dlc_peta/goat_anims/jump"					blend_set="all"/>
+	<anim	name="anim_left_strafe"			file="anims/pd2_dlc_peta/goat_anims/left_strafe"			blend_set="all"/>
+	<anim	name="anim_right_strafe"		file="anims/pd2_dlc_peta/goat_anims/right_strafe"			blend_set="all"/>
+
+	<anim	name="anim_attack_feet"			file="anims/pd2_dlc_peta/goat_anims/attack_feet"			blend_set="all"/>
+	<anim	name="anim_attack_head"			file="anims/pd2_dlc_peta/goat_anims/attack_head"			blend_set="all"/>
+	<anim	name="anim_drink_fountain"		file="anims/pd2_dlc_peta/goat_anims/drink_fountain"			blend_set="all"/>
+	<anim	name="anim_hang_fan"			file="anims/pd2_dlc_peta/goat_anims/hang_fan"				blend_set="all"/>
+	<anim	name="anim_hang_lamp"			file="anims/pd2_dlc_peta/goat_anims/hang_lamp"				blend_set="all"/>
+	<anim	name="anim_hanging_scaffold"	file="anims/pd2_dlc_peta/goat_anims/hanging_scaffold"		blend_set="all"/>
+
+	<anim	name="anim_idle_korv"			file="anims/pd2_dlc_peta/goat_anims/idle_korv"				blend_set="all"/>
+	<anim	name="anim_idle_var0"			file="anims/pd2_dlc_peta/goat_anims/idle_var0"				blend_set="all"/>
+	<anim	name="anim_idle_var1"			file="anims/pd2_dlc_peta/goat_anims/idle_var1"				blend_set="all"/>
+	<anim	name="anim_idle_var2"			file="anims/pd2_dlc_peta/goat_anims/idle_var2"				blend_set="all"/>
+	<anim	name="anim_sleeping"			file="anims/pd2_dlc_peta/goat_anims/sleeping"				blend_set="all"/>
+
+	<anim	name="anim_yell_baah"			file="anims/pd2_dlc_peta/goat_anims/yell_baah"				blend_set="head"/>
+
+	<anim	name="anim_hit_head_r"			file="anims/pd2_dlc_peta/goat_anims/hit_head_r"				blend_set="neck"/>
+	<anim	name="anim_hit_head_l"			file="anims/pd2_dlc_peta/goat_anims/hit_head_l"				blend_set="neck"/>
+	<anim	name="anim_hit_head_up"			file="anims/pd2_dlc_peta/goat_anims/hit_head_up"			blend_set="neck"/>
+	<anim	name="anim_hit_head_dwn"		file="anims/pd2_dlc_peta/goat_anims/hit_head_dwn"			blend_set="neck"/>
+	<anim	name="anim_hit_head_circle"		file="anims/pd2_dlc_peta/goat_anims/hit_head_circle"		blend_set="neck"/>
+
+</xml>

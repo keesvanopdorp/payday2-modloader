@@ -1,0 +1,22 @@
+<table name="Apple AirPods">
+
+    <Localization directory="Localization" default="english.txt">
+    </Localization>
+     
+    <GlobalValue id="airpods" color="Color(0, 0.5, 2)"/>
+     
+    <Mask id="airpods" unit="units/mods/masks/msk_airpods/msk_airpods" texture_bundle_folder="mods" global_value="airpods" type="glasses" skip_mask_on_sequence="true" />
+    
+    <AddFiles directory="assets">    
+        <cooked_physics path="units/mods/masks/msk_airpods/msk_airpods"/>
+        <model path="units/mods/masks/msk_airpods/msk_airpods"/>
+        <object path="units/mods/masks/msk_airpods/msk_airpods"/>
+        <unit path="units/mods/masks/msk_airpods/msk_airpods"/>
+        <material_config path="units/mods/masks/msk_airpods/msk_airpods"/>
+        
+        <texture path="units/mods/masks/msk_airpods/msk_airpods_df"/>
+        <texture path="units/mods/masks/msk_airpods/msk_airpods_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/airpods"/>
+        
+    </AddFiles>
+</table>

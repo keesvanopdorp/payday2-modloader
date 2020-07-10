@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_brainiack_mask" materials="units/mods/masks/msk_diego_hat/msk_diego_hat" />
+    <graphics>
+        <object enabled="true" name="g_brainiack" />
+    </graphics>
+</dynamic_object>

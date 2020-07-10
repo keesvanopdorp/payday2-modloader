@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mcm_prop_kitchen_knives_lod1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_knives/mcm_prop_kitchen_knives_df" mip="3" />
+		<bump_normal_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_knives/mcm_prop_kitchen_knives_nm" mip="3" />
+	</material>
+	<material name="mcm_prop_kitchen_knives_lod0" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_knives/mcm_prop_kitchen_knives_df" mip="0" />
+		<bump_normal_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_knives/mcm_prop_kitchen_knives_nm" mip="0" />
+	</material>
+</materials>

@@ -1,0 +1,13 @@
+<materials version="3">
+	<material name="mat_cables" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_workshop_johnwick_shooting_range/chl_prop_workshop_johnwick_shooting_range_booth_side_df" mip="4" />
+		<bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_workshop_johnwick_shooting_range/chl_prop_workshop_johnwick_shooting_range_booth_side_nm" mip="4"/>
+	</material>
+	<material name="mat_roof" render_template="generic:DIFFUSE_TEXTURE" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/architecture/chl_int_dropped_ceiling/chl_int_dropped_ceiling_df" mip="1" />
+	</material>
+	<material name="mat_wood" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_bathroom_shelf/chl_prop_bathroom_shelf_df" mip="1" />
+		<bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_bathroom_shelf/chl_prop_bathroom_shelf_nm" mip="4"/>
+	</material>
+</materials>

@@ -1,0 +1,12 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_spa/props/spa_prop_street_light/spa_prop_street_light" orientation_object="rp_spa_street_lights_night_cone" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_spa_street_lights_night_cone" />
+			<object name="c_sphere" collision_type="sphere" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<object name="g_light_cone" enabled="true" />
+	</graphics>
+</dynamic_object>

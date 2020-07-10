@@ -1,0 +1,28 @@
+<table name="Fake Elvis Presley">
+	<AssetUpdates id="" version="3" provider="modworkshop" use_local_dir="true" use_local_path="true"/>
+	<Localization directory="Loc" default="EN.json"/>
+	<Character id="elvis_presley" based_on="bodhi" unit="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" fps_unit="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" default_mask="the_king_mask">
+		<character speech_prefix="rb_elvis"/>
+		<blackmarket desc_id="heist_contact_elvis_description" texture_bundle_folder="elvis_presley"/>
+		<gui post_event="pln_contact_elvis">
+			<videos>
+				<value_node value="elvis"/>
+			</videos>
+		</gui>
+		<masks x="0" y="0" z="0.7"/>
+	</Character>
+	
+	<AddFiles directory="Assets">
+		<unit path="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" force="true"/>
+		<object path="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" force="true"/>
+		<cooked_physics path="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" force="true"/>
+		<material_config path="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" force="true"/>
+		<model path="units/pd2_dlc_elvis_presley/characters/npc_elvis_presley/npc_elvis_presley" force="true"/>
+		<texture path="guis/dlcs/elvis_presley/textures/pd2/blackmarket/icons/characters/elvis_presley" force="true"/>
+		<unit path="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" force="true"/>
+		<object path="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" force="true"/>
+		<cooked_physics path="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" force="true"/>
+		<material_config path="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" force="true"/>
+		<model path="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" force="true"/>
+	</AddFiles>
+</table>

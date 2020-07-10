@@ -1,0 +1,12 @@
+<dynamic_object>
+    <diesel orientation_object="rp_str_prop_alley_graffiti_ishwah" materials="units/pd2_dlc1/props/str_prop_alley_graffiti/str_prop_alley_graffiti_ishwah" />
+	<bodies>
+        <body enabled="true" template="editor" name="static_body" >
+			<object name="rp_str_prop_alley_graffiti_ishwah" />
+			<object name="c_box_01" collision_type="box" padding="-2.5"/>
+        </body>
+	</bodies>
+    <graphics>
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<dynamic_object>
+	<diesel materials="units/payday2/architecture/lcm/lcm_int_door_metal_01" orientation_object="rp_lcm_ext_door_metal_01_closed" />
+    <bodies>
+        <body name="static_body" template="static" enabled="true" >
+            <object name="rp_lcm_ext_door_metal_01_closed"/>
+            <object collision_type="mesh_mopp" enabled="true" name="c_lcm_int_door_01"/>
+        </body>
+    </bodies>
+	
+	<decal_surfaces default_material="metal" static="true">
+		<decal_mesh name="dm_lcm_int_door_01" material="metal" enabled="true"/>
+	</decal_surfaces> 
+	
+    <graphics>
+        <object enabled="true" name="s_lcm_int_door_01" shadow_caster="true" />
+        <object enabled="true" name="g_lcm_int_door_01" shadow_caster="false" />
+        <object enabled="true" name="g_lcm_int_door_01_knob" shadow_caster="false" />
+    </graphics>
+</dynamic_object> 

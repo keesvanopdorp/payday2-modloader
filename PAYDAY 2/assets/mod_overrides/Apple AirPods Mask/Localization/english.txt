@@ -1,0 +1,8 @@
+{
+    "bm_msk_airpods" : "Apple AirPods",
+	"bm_msk_airpods_desc" : "The new AirPods -- complete with Wireless Charging Case -- deliver the wireless headphone experience, reimagined. Just pull them out of the case and they're ready to use with your iPhone, Apple Watch, iPad, or Mac.
+
+...And what better way to display your wealth as a professional heister, than to wear one of these and flex on those broke-ass cops.",
+
+    "menu_l_global_value_airpods" : "this is an apple brand item!"
+}

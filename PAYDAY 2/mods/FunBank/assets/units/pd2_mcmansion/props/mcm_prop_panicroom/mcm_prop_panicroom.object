@@ -1,0 +1,16 @@
+<dynamic_object>
+	<diesel materials="units/pd2_mcmansion/props/mcm_prop_panicroom/mcm_prop_panicroom" orientation_object="rp_mcm_prop_panicroom" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mcm_prop_panicroom" />
+			<object name="c_mesh_temp" collision_type="mesh_mopp" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="metal">
+		<decal_mesh name="dm_metal" enabled="true" material="metal" />
+		<decal_mesh name="dm_concrete" enabled="true" material="concrete" />
+	</decal_surfaces>
+	<graphics>
+		<object name="g_g" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/street/street_lights/street_lights_night" orientation_object="rp_street_lights_night" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_street_lights_night" />
+      <object name="c_street_lights_night" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  
+  <decal_surfaces default_material="metal_hollow" static="true">
+    <decal_mesh name="dm_street_lights" enabled="true" material="metal_hollow" />
+    <decal_mesh name="dm_street_lights_stone" enabled="true" material="concrete"/>
+  </decal_surfaces>
+  
+  <graphics>
+    <object name="g_street_lights_night" enabled="true" instance_struct="world_tm" />
+    <object name="s_street_lights_night" enabled="true" shadow_caster="true" instance_struct="world_tm"/>
+  </graphics>
+</dynamic_object>

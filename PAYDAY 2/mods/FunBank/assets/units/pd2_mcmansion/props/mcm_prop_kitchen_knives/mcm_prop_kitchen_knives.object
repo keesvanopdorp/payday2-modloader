@@ -1,0 +1,22 @@
+<dynamic_object>
+	<diesel materials="units/pd2_mcmansion/props/mcm_prop_kitchen_knives/mcm_prop_kitchen_knives" orientation_object="rp_mcm_prop_kitchen_knives" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mcm_prop_kitchen_knives" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+			<object name="c_box_02" collision_type="box" padding="-2.5" />
+			<object name="c_box_03" collision_type="box" padding="-2.5" />
+			<object name="c_box_04" collision_type="box" padding="-2.5" />
+			<object name="c_box_05" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="wood">
+		<decal_mesh name="dm_wood" enabled="true" material="wood" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="grp_lod_g">
+			<object name="g_lod0" enabled="true" max_distance="1000" />
+			<object name="g_lod1" enabled="true" />
+		</lod_object>
+	</graphics>
+</dynamic_object>

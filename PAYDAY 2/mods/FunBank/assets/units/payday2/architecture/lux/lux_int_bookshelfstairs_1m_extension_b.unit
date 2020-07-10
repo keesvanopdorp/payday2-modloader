@@ -1,0 +1,6 @@
+<unit type="lxa" slot="1" >
+    <object file="units/payday2/architecture/lux/lux_int_bookshelfstairs_1m_extension_b" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

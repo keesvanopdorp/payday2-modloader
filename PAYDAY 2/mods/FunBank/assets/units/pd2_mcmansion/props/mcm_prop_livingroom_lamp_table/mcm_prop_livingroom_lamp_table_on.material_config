@@ -1,0 +1,14 @@
+<materials version="3" group="mcm_prop_livingroom_lamp_table_group">
+    <material name="mat_lamp_table_lod1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_df" mip="4" />
+        <bump_normal_texture file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_nm" mip="3" />
+        <self_illumination_texture file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_il"/>
+        <variable name="il_multiplier" type="scalar" value="megatron"/>
+    </material>
+    <material name="mat_lamp_table_lod0" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_df"/>
+        <bump_normal_texture file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_nm"/>
+        <self_illumination_texture file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_il"/>
+        <variable name="il_multiplier" type="scalar" value="megatron"/>
+    </material>
+</materials>

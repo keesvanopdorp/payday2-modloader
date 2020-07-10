@@ -1,0 +1,22 @@
+<table name="Crazy Diamond Mask">
+
+    <Localization directory="Localization" default="english.txt">
+    </Localization>
+     
+    <GlobalValue id="cds" color="Color(1, 0.5, 0)"/>
+     
+    <Mask id="cds" unit="units/mods/masks/msk_cds/msk_cds" texture_bundle_folder="mods" global_value="cds" type="helmet" />
+    
+    <AddFiles directory="assets">    
+        <cooked_physics path="units/mods/masks/msk_cds/msk_cds"/>
+        <model path="units/mods/masks/msk_cds/msk_cds"/>
+        <object path="units/mods/masks/msk_cds/msk_cds"/>
+        <unit path="units/mods/masks/msk_cds/msk_cds"/>
+        <material_config path="units/mods/masks/msk_cds/msk_cds"/>
+        
+        <texture path="units/mods/masks/msk_cds/msk_cds_df"/>
+        <texture path="units/mods/masks/msk_cds/msk_cds_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/cds"/>
+        
+    </AddFiles>
+</table>

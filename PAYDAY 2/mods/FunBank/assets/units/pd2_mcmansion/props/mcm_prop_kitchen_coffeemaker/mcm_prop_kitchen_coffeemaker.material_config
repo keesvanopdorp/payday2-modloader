@@ -1,0 +1,16 @@
+<materials version="3">
+    <material name="mat_glass_breakable" version="2" decal_material="glass_breakable" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE" >
+        <variable value="2 1 0.59999996423721" type="vector3" name="fresnel_settings"/>
+        <opacity_texture file="units/payday2/glass/glass_clear_small_dark_op"/>
+        <diffuse_texture file="units/payday2/glass/glass_clear_small_dark_df"/>
+        <reflection_texture global_texture="current_global_texture" type="cube"/>
+    </material>
+	<material name="mat_mcm_coffe_maker_lod1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_coffeemaker/mcm_prop_kitchen_coffeemaker_df" mip="3" />
+		<bump_normal_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_coffeemaker/mcm_prop_kitchen_coffeemaker_nm" mip="3" />
+	</material>
+	<material name="mat_mcm_coffe_maker_lod0" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_coffeemaker/mcm_prop_kitchen_coffeemaker_df" mip="0" />
+		<bump_normal_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_coffeemaker/mcm_prop_kitchen_coffeemaker_nm" mip="0" />
+	</material>
+</materials>

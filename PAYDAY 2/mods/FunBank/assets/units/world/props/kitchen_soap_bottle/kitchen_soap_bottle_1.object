@@ -1,0 +1,18 @@
+<dynamic_object>
+    <diesel orientation_object="rp_kitchen_soap_bottle_1" materials="units/world/props/kitchen_soap_bottle/kitchen_soap_bottle" />
+	<sequence_manager file="units/world/props/small_prop" />
+    <bodies>
+		<body name="static_body" remove_ray_type="walk" enabled="true" template="raycoll_static">
+			<object name="rp_kitchen_soap_bottle_1" />
+			<object name="c_box_1" collision_type="box" padding="-2"/>
+		</body>
+		<body name="dynamic_body" enabled="false" template="small_prop" pushed_by_mover="false">
+			<object name="rp_kitchen_soap_bottle_1" />
+			<object name="c_box_1" collision_type="box" material="balsa"/>
+		</body>
+    </bodies>
+	<decal_surfaces default_material="plastic"/>
+    <graphics>
+        <object enabled="true" name="g_kitchen_soap_bottle_1" />
+    </graphics>
+</dynamic_object>

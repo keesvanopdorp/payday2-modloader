@@ -1,0 +1,12 @@
+<unit type="static" slot="1" >
+    <object file="units/mods/masks/msk_gea/msk_gea" />
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+        <extension class="MaskExt" name="base" />
+    </extensions>
+</unit>
+
+<!--
+you only need to change the following:
+object (2nd line)
+-->

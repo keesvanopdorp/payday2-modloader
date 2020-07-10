@@ -1,0 +1,5 @@
+<materials version="3">
+    <material render_template="generic:DIFFUSE_TEXTURE:VERTEX_COLOR" decal_material="sheet_metal" name="mat_stove" version="2">
+        <diffuse_texture file="units/payday2/props/lxa_prop_kitchen_stove_fan/lxa_prop_kitchen_stove_fan_df"/>
+    </material>
+</materials>

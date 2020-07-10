@@ -1,0 +1,9 @@
+<materials version="3">
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+    <material version="2" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" name="mat_lcm_int_door_window_metal_01">
+        <diffuse_texture file="units/payday2/architecture/lcm/lcm_int_door_window_metal_01_df"/>
+        <reflection_texture file="environments/cubemaps/cubemap_steel" type="cubemap"/>
+        <variable value="1 0 2" type="vector3" name="environment_settings"/>
+        <bump_normal_texture file="units/payday2/architecture/lcm/lcm_int_door_window_metal_01_nm"/>
+    </material>
+</materials>

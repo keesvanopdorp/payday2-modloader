@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_str_prop_park_fence_high_pillar" materials="units/payday2/props/str_prop_park_fence/str_prop_park_fence" />
+    <bodies>
+        <body enabled="true" template="static" name="body0" >
+			<object name="rp_str_prop_park_fence_high_pillar" />
+				<object collision_type="box" name="c_box_000" padding="-2"/>
+		</body>
+    </bodies>
+    
+	<decal_surfaces default_material="concrete">
+		<decal_mesh name="dm_concrete"	enabled="true" material="concrete" />
+	</decal_surfaces>
+	
+	<graphics>
+        <object enabled="true" name="g_g" shadow_caster="true" />
+    </graphics>
+</dynamic_object>

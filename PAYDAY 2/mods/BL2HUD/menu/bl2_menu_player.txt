@@ -1,0 +1,48 @@
+{
+		"menu_id" : "bl_menu_player_id",
+		"parent_menu_id" : "bl_menu_id",
+		"title" : "bl_menu_player",
+		"description" : "bl_menu_player_desc",
+		"items" : [
+		{
+			"type" : "slider",
+			"id" : "bl_player_scale",
+			"title" : "bl_scale",
+			"description" : "bl_scale_desc",
+			"callback" : "callback_bl_player_scale",
+			"value" : "player_scale",
+			"max" : 1.5,
+			"min" : 0.5,
+			"step" : 0.01,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "bl_player_prefix",
+			"title" : "bl_prefix",
+			"description" : "bl_prefix_desc",
+			"callback" : "callback_bl_player_prefix",
+			"items" : [
+				"prefix_deck_level",
+				"prefix_player_level",
+				"prefix_set_1",
+				"prefix_set_2"
+			],
+			"value" : "player_prefix",
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "bl_player_exp_panel",
+			"title" : "bl_exp_panel",
+			"description" : "bl_exp_panel_desc",
+			"callback" : "callback_player_exp_panel",
+			"items" : [
+				"exp_panel_normal",
+				"exp_panel_disable_at_max",
+				"exp_panel_disable",
+				"exp_panel_hide_at_max",
+				"exp_panel_hide"
+			],
+			"value" : "exp_panel",
+		}
+	]
+}

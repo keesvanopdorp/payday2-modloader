@@ -1,0 +1,17 @@
+<materials version="3">
+    <material name="mat_spotlight" render_template="generic:DIFFUSE_TEXTURE:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/payday2/props/com_prop_store_spotlight/com_prop_store_spotlight_df"/>
+        <self_illumination_texture file="units/payday2/props/com_prop_store_spotlight/com_prop_store_spotlight_il"/>
+        <variable value="megatron" type="scalar" name="il_multiplier"/>
+    </material>
+    <material name="mat_spotlight_off" render_template="generic:DIFFUSE_TEXTURE" version="2">
+        <diffuse_texture file="units/payday2/props/com_prop_store_spotlight/com_prop_store_spotlight_df"/>
+    </material>
+    <material version="2" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:DIFFUSE0_UVANIM:INTERSECTION_FADEOUT:VIEW_ANGLE_FALLOFF_OP" name="sunray_thin">
+        <diffuse_texture file="units/payday2/props/com_prop_store_spotlight/com_prop_store_spotlight_sunray_df"/>
+        <variable value="0 -0.19199991226196 0" type="vector3" name="uv0_speed"/>
+        <variable value="match" type="scalar" name="intensity"/>
+        <variable value="2.4500999450684" type="scalar" name="falloff_exp"/>
+        <variable value="396" type="scalar" name="fadeout_distance"/>
+    </material>
+</materials>

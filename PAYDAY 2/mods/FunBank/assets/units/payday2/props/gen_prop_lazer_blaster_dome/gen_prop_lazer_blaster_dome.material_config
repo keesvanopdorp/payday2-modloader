@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="mtr_lazer_blaster" version="2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <diffuse_texture file="units/payday2/props/gen_prop_lazer_blaster_dome/gen_prop_lazer_blaster_dome_df"/>
+        <bump_normal_texture file="units/payday2/props/gen_prop_lazer_blaster_dome/gen_prop_lazer_blaster_dome_nm"/>
+    </material>
+</materials>

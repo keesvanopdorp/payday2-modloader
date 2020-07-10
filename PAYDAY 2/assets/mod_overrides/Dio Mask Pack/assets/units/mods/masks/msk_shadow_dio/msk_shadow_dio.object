@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/masks/msk_shadow_dio/msk_shadow_dio" orientation_object="rp_vlad_armor_mask" />
+	<graphics>
+		<object name="g_vlad_armor" enabled="true" />
+	</graphics>
+</dynamic_object>

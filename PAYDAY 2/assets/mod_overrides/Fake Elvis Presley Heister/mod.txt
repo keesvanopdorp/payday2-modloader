@@ -1,0 +1,8 @@
+{
+	"name" : "Fake Elvis Presley",
+	"description" : "truth is like the sun, you can shut it out for a time, but it ain't goin' away... ironically...",
+	"author" : "CVIII",
+	"contact" : "",
+	"version" : "3",
+    "blt_version" : 2
+}

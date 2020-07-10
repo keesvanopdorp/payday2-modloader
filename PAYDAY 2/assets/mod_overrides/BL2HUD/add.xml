@@ -1,0 +1,6 @@
+<table>
+	<texture path="guis/textures/BL2HUD/icon_atlas"/>
+	<texture path="guis/textures/BL2HUD/bar_atlas"/>
+	<texture path="guis/textures/BL2HUD/extra_atlas"/>
+	<texture path="guis/textures/BL2HUD/light_atlas"/>
+</table>

@@ -1,0 +1,6 @@
+{
+    "bm_msk_cds" : "Crazy Diamond",
+	"bm_msk_cds_desc" : "Gureto daze. ",
+
+    "menu_l_global_value_cds" : "Is this a JOJO reference?"
+}

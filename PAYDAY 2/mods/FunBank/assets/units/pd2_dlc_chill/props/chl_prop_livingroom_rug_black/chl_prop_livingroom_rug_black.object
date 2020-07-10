@@ -1,0 +1,19 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_chill/props/chl_prop_livingroom_rug_black/chl_prop_livingroom_rug_black" orientation_object="rp_chl_prop_livingroom_rug_black" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_chl_prop_livingroom_rug_black" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="cloth">
+		<decal_mesh name="dm_cloth" enabled="true" material="cloth" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="lod_g_rug">
+			<object name="g_rug_lod0" enabled="true" max_distance="1500" />			
+			<object name="g_rug_lod1" enabled="true" />			
+		</lod_object>
+		<object name="g_ao" enabled="true" />
+	</graphics>
+</dynamic_object>

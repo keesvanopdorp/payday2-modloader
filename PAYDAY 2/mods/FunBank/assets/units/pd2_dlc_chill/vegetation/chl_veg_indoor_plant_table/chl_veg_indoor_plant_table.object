@@ -1,0 +1,23 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_chill/vegetation/chl_veg_indoor_plant_table/chl_veg_indoor_plant_table" orientation_object="rp_chl_veg_indoor_plant_table" />
+	<sequence_manager file="units/pd2_dlc_chill/vegetation/chl_veg_indoor_plant_table/chl_veg_indoor_plant_table" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_chl_veg_indoor_plant_table" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+		<body name="body_dynamic" enabled="false" template="dynamic">
+			<object name="rp_chl_veg_indoor_plant_table" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="marble">
+		<decal_mesh name="dm_foliage" enabled="true" material="foliage" />
+		<decal_mesh name="dm_marble" enabled="true" material="marble" />
+	</decal_surfaces>
+	<graphics>
+		<object name="g_g" enabled="true" />
+		<object name="g_broken" enabled="false" />
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

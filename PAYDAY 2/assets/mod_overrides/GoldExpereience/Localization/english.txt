@@ -1,0 +1,6 @@
+{
+    "bm_msk_gea" : "Gold Experience",
+	"bm_msk_gea_desc" : "I'm gonna become a gangstar!!! but a heister is fine too... ",
+
+    "menu_l_global_value_gea" : "Is this a JOJO reference?"
+}

@@ -1,0 +1,30 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_chill/architecture/chl_ext_kitchen_cabinet/chl_ext_kitchen_cabinet_oven_cabinet_medium_end" orientation_object="rp_chl_ext_kitchen_cabinet_oven_cabinet_medium_end" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_chl_ext_kitchen_cabinet_oven_cabinet_medium_end" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+		<body name="body_collision_01" enabled="true" template="animated">
+			<object name="anim_drawer_medium_end" />
+			<object name="c_box_03" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="wood">
+		<decal_mesh name="dm_dme_metal" enabled="true" material="thin_layer" />
+		<decal_mesh name="dm_dme_wood" enabled="true" material="thin_layer" />
+		<decal_mesh name="dm_wood" enabled="true" material="wood" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="lod_g">
+			<object name="g_lod0" enabled="true" max_distance="1500" />
+			<object name="g_lod1" enabled="true" />
+		</lod_object>
+		<lod_object name="lod_g_dme">
+			<object name="g_dme_lod0" enabled="true" max_distance="1500" />
+			<object name="g_dme_lod1" enabled="true" />
+		</lod_object>
+		<object name="s_s" enabled="true" shadow_caster="true" />
+		<object name="s_dme_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

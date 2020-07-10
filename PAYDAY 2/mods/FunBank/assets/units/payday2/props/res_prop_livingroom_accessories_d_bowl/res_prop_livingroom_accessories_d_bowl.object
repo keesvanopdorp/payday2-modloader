@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/payday2/props/res_prop_livingroom_accessories_d_bowl/res_prop_livingroom_accessories_d_bowl" orientation_object="rp_res_prop_livingroom_accessories_d_bowl" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_res_prop_livingroom_accessories_d_bowl" />
+			<object name="c_capsule_01" collision_type="capsule" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces default_material="metal">
+		<decal_mesh name="dm_metal" enabled="true" material="metal" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="lod_bowl">
+			<object name="g_bowl_lod0" enabled="true"  max_distance="1000"  max_draw_lod="0" />
+			<object name="g_bowl_lod1" enabled="true" lod="1" />
+		</lod_object>
+		<object name="s_s" enabled="true" />
+	</graphics>
+</dynamic_object>

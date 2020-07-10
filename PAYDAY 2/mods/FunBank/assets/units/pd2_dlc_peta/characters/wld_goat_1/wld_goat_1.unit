@@ -1,0 +1,33 @@
+<unit type="pta" slot="1">
+	<object file="units/pd2_dlc_peta/characters/wld_goat_1/wld_goat_1" />
+	<network sync="spawn"/>
+	<anim_state_machine name="anims/pd2_dlc_peta/goat_state_machine/goat" />
+
+	<dependencies>
+		<depends_on animation_def="anims/pd2_dlc_peta/goat_state_machine/goat"/>
+		<depends_on animation_state_machine="anims/pd2_dlc_peta/goat_state_machine/goat"/>
+		<depends_on bnk="soundbanks/goat_sfx" />
+		<depends_on bnk="soundbanks/safehouse_games " />
+		<depends_on unit="units/pd2_dlc_peta/pickups/pta_pku_goatbag/pta_pku_goatbag" />
+	</dependencies>
+
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+		<extension name="interaction" class="CarryInteractionExt">
+			<var name="tweak_data" value="hold_grab_goat" />
+			<var name="_interact_object" value="Spine1"/>
+			<var name="_remove_on_interact" value="true" />
+			<!-- <var name="_global_event" value="pku_cocaine" /> -->
+		</extension>
+		<extension name="carry_data" class="CarryData">
+			<var name="_carry_id" value="goat" />
+		</extension>
+	</extensions>
+
+	<sounds>
+		<default_soundsource source="Jaw_01"/>
+		<soundsource name="snd" source="Jaw_01" />
+		<soundsource name="snd_01" source="snd_source" />
+	</sounds>
+</unit>

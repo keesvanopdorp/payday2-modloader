@@ -1,0 +1,12 @@
+
+<state_machine name="cop" timebase="frames">
+	<segment name="base"/>
+
+	<segment name="neck" parent="base" />
+	<segment name="head" parent="neck" />
+	
+	<default state="civilian/empty"/>
+	
+	<states file="anims/pd2_dlc_peta/goat_state_machine/std"/>
+
+</state_machine>

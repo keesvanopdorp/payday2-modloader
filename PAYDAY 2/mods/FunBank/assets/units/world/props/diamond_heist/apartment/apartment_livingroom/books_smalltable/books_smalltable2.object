@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/props/diamond_heist/apartment/apartment_livingroom/books_coffetable/books_coffetable" orientation_object="rp_books_smalltable2" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="rp_books_smalltable2" />
+      <object name="c_books_smalltable2" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  <decal_surfaces default_material="plastic">
+    <decal_mesh name="g_books_smalltable2" enabled="true" material="plastic" />
+  </decal_surfaces>
+  <graphics>
+    <object name="g_books_smalltable2" enabled="true"/>
+  </graphics>
+</dynamic_object> 

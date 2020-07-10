@@ -1,0 +1,23 @@
+<dynamic_object>
+	<diesel materials="units/pd2_mcmansion/props/mcm_prop_kitchen_coffeemaker/mcm_prop_kitchen_coffeemaker" orientation_object="rp_mcm_prop_kitchen_coffeemaker" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mcm_prop_kitchen_coffeemaker" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="thin_layer">
+		<decal_mesh name="dm_glass_breakable" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_plastic" enabled="true" material="plastic" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="grp_lod_g_can">
+			<object name="g_can_lod0" enabled="true" max_distance="600" />
+			<object name="g_can_lod1" enabled="true" />
+		</lod_object>
+		<lod_object name="grp_lod_g_main">
+			<object name="g_main_lod0" enabled="true" max_distance="600" />
+			<object name="g_main_lod1" enabled="true" />
+		</lod_object>
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,105 @@
+<table name="Dio Mask Pack" image="guis/dio" color="Color(0.4, 0.5, 1)">
+    <AssetUpdates id="23981" version="1.0" provider="modworkshop"/>
+	<Localization directory="Localization" default="english.txt">
+    </Localization>
+    <GlobalValue id="dio" color="Color(0.4, 0.5, 1)" is_category="true"/>
+     
+    <Mask id="brando" unit="units/mods/masks/msk_brando/msk_brando" texture_bundle_folder="mods" global_value="dio" type="helmet" />
+    <Mask id="shadow_dio" unit="units/mods/masks/msk_shadow_dio/msk_shadow_dio" texture_bundle_folder="mods" global_value="dio" type="helmet" />	
+	<Mask id="dio" unit="units/mods/masks/msk_dio/msk_dio" texture_bundle_folder="mods" global_value="dio" type="helmet" />	
+    <Mask id="dio_bandana" unit="units/mods/masks/msk_dio_bandana/msk_dio_bandana" texture_bundle_folder="mods" global_value="dio" type="glasses" skip_mask_on_sequence="true"/>	
+	<Mask id="high_dio" unit="units/mods/masks/msk_high_dio/msk_high_dio" texture_bundle_folder="mods" global_value="dio" type="helmet" />	
+	<Mask id="so_dio" unit="units/mods/masks/msk_so_dio/msk_so_dio" texture_bundle_folder="mods" global_value="dio" type="helmet" />	
+	<Mask id="diego" unit="units/mods/masks/msk_diego/msk_diego" texture_bundle_folder="mods" global_value="dio" type="helmet" />	
+    <Mask id="diego_s" unit="units/mods/masks/msk_diego_s/msk_diego_s" texture_bundle_folder="mods" global_value="dio" type="helmet" />	 	
+	<Mask id="diego_hat" unit="units/mods/masks/msk_diego_hat/msk_diego_hat" texture_bundle_folder="mods" global_value="dio" type="hat" />
+	
+	<AddFiles directory="assets">    
+        <cooked_physics path="units/mods/masks/msk_brando/msk_brando"/>
+        <model path="units/mods/masks/msk_brando/msk_brando"/>
+        <object path="units/mods/masks/msk_brando/msk_brando"/>
+        <unit path="units/mods/masks/msk_brando/msk_brando"/>
+        <material_config path="units/mods/masks/msk_brando/msk_brando"/>
+        
+        <texture path="units/mods/masks/msk_brando/msk_brando_df"/>
+        <texture path="units/mods/masks/msk_brando/msk_brando_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/brando"/>
+        
+        <cooked_physics path="units/mods/masks/msk_shadow_dio/msk_shadow_dio"/>
+        <model path="units/mods/masks/msk_shadow_dio/msk_shadow_dio"/>
+        <object path="units/mods/masks/msk_shadow_dio/msk_shadow_dio"/>
+        <unit path="units/mods/masks/msk_shadow_dio/msk_shadow_dio"/>
+        <material_config path="units/mods/masks/msk_shadow_dio/msk_shadow_dio"/>
+        
+        <texture path="units/mods/masks/msk_shadow_dio/msk_shadow_dio_df"/>
+        <texture path="units/mods/masks/msk_shadow_dio/msk_shadow_dio_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/shadow_dio"/>
+		
+        <cooked_physics path="units/mods/masks/msk_dio/msk_dio"/>
+        <model path="units/mods/masks/msk_dio/msk_dio"/>
+        <object path="units/mods/masks/msk_dio/msk_dio"/>
+        <unit path="units/mods/masks/msk_dio/msk_dio"/>
+        <material_config path="units/mods/masks/msk_dio/msk_dio"/>
+        
+        <texture path="units/mods/masks/msk_dio/msk_dio_df"/>
+        <texture path="units/mods/masks/msk_dio/msk_dio_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/dio"/>
+
+        <cooked_physics path="units/mods/masks/msk_dio_bandana/msk_dio_bandana"/>
+        <model path="units/mods/masks/msk_dio_bandana/msk_dio_bandana"/>
+        <object path="units/mods/masks/msk_dio_bandana/msk_dio_bandana"/>
+        <unit path="units/mods/masks/msk_dio_bandana/msk_dio_bandana"/>
+        <material_config path="units/mods/masks/msk_dio_bandana/msk_dio_bandana"/>
+        
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/dio_bandana"/>
+		
+		<cooked_physics path="units/mods/masks/msk_high_dio/msk_high_dio"/>
+        <model path="units/mods/masks/msk_high_dio/msk_high_dio"/>
+        <object path="units/mods/masks/msk_high_dio/msk_high_dio"/>
+        <unit path="units/mods/masks/msk_high_dio/msk_high_dio"/>
+        <material_config path="units/mods/masks/msk_high_dio/msk_high_dio"/>
+        
+        <texture path="units/mods/masks/msk_high_dio/msk_high_dio_df"/>
+        <texture path="units/mods/masks/msk_high_dio/msk_high_dio_nm"/>
+		<texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/high_dio"/>
+		
+		<cooked_physics path="units/mods/masks/msk_so_dio/msk_so_dio"/>
+        <model path="units/mods/masks/msk_so_dio/msk_so_dio"/>
+        <object path="units/mods/masks/msk_so_dio/msk_so_dio"/>
+        <unit path="units/mods/masks/msk_so_dio/msk_so_dio"/>
+        <material_config path="units/mods/masks/msk_so_dio/msk_so_dio"/>
+        
+        <texture path="units/mods/masks/msk_so_dio/msk_so_dio_df"/>
+        <texture path="units/mods/masks/msk_so_dio/msk_so_dio_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/so_dio"/>
+		
+		<cooked_physics path="units/mods/masks/msk_diego/msk_diego"/>
+        <model path="units/mods/masks/msk_diego/msk_diego"/>
+        <object path="units/mods/masks/msk_diego/msk_diego"/>
+        <unit path="units/mods/masks/msk_diego/msk_diego"/>
+        <material_config path="units/mods/masks/msk_diego/msk_diego"/>
+        
+        <texture path="units/mods/masks/msk_diego/msk_diego_df"/>
+        <texture path="units/mods/masks/msk_diego/msk_diego_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/diego"/>
+
+		<cooked_physics path="units/mods/masks/msk_diego_s/msk_diego_s"/>
+        <model path="units/mods/masks/msk_diego_s/msk_diego_s"/>
+        <object path="units/mods/masks/msk_diego_s/msk_diego_s"/>
+        <unit path="units/mods/masks/msk_diego_s/msk_diego_s"/>
+        <material_config path="units/mods/masks/msk_diego_s/msk_diego_s"/>
+        
+        <texture path="units/mods/masks/msk_diego_s/msk_diego_s_df"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/diego_s"/>
+		
+		<cooked_physics path="units/mods/masks/msk_diego_hat/msk_diego_hat"/>
+        <model path="units/mods/masks/msk_diego_hat/msk_diego_hat"/>
+        <object path="units/mods/masks/msk_diego_hat/msk_diego_hat"/>
+        <unit path="units/mods/masks/msk_diego_hat/msk_diego_hat"/>
+        <material_config path="units/mods/masks/msk_diego_hat/msk_diego_hat"/>
+        
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/diego_hat"/>
+
+		<texture path="guis/dio"/>
+		</AddFiles>
+</table>

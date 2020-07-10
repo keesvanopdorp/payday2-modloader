@@ -49,7 +49,7 @@ export default Vue.extend({
       message: ""
     };
   },
-  created() {
+  async created() {
     this.getConfig();
     this.getMods();
     this.$on("add mod", async (data: any) => {
@@ -82,10 +82,9 @@ export default Vue.extend({
         this.dragging = true;
       }
     },
-    getConfig(): void {
+    getConfig() {
       this.configPath = path.join(
-        remote.app.getPath("appData"),
-        this.appName,
+        remote.app.getPath("userData"),
         "config.json"
       );
       if (!fs.existsSync(this.configPath)) {

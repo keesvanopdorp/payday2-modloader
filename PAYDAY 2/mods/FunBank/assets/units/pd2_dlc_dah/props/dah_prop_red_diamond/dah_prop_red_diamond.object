@@ -1,0 +1,19 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" orientation_object="rp_dah_prop_red_diamond" />
+	<sequence_manager file="units/pd2_dlc_dah/props/dah_prop_red_diamond/dah_prop_red_diamond" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_dah_prop_red_diamond" />
+			<object name="g_pillow" enabled="true" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<graphic_group name="grp_diamond" enabled="true">
+			<object name="g_diamond" enabled="true" />
+			<object name="g_diamond_back" enabled="true" />
+			<object name="g_diamond_glow" enabled="true" />
+			<object name="g_pillow" enabled="true" />
+			<object name="s_s" enabled="true" shadow_caster="true" />
+		</graphic_group>
+	</graphics>
+</dynamic_object>

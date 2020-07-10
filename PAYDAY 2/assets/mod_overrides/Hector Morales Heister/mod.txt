@@ -1,0 +1,8 @@
+{
+	"name" : "Hector Morales",
+	"description" : "i will take my revenge on the mendozas by my OWN",
+	"author" : "CVIII",
+	"contact" : "",
+	"version" : "3",
+    "blt_version" : 2
+}

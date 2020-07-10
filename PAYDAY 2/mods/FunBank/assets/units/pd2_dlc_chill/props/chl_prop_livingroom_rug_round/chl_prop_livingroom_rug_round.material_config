@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mat_rug" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_rug_round/chl_prop_livingroom_rug_round_df" mip="1" />
+		<bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_rug_round/chl_prop_livingroom_rug_round_nm" mip="4" />
+	</material>
+	<material name="mat_rug_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_rug_round/chl_prop_livingroom_rug_round_df" mip="1" />
+		<bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_rug_round/chl_prop_livingroom_rug_round_nm" mip="4" />
+	</material>
+</materials>

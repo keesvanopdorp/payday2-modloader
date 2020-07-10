@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc_chill/props/chl_prop_livingroom_speaker/chl_prop_livingroom_speaker" orientation_object="rp_res_prop_livingroom_speaker" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+			<object name="c_box" collision_type="box" padding="-2.5"/>
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_wood" material="wood" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_speaker" />
+    </graphics>
+</dynamic_object>

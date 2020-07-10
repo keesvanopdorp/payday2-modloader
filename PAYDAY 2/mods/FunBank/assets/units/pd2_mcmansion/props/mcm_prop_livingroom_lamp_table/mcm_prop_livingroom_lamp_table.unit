@@ -1,0 +1,15 @@
+<unit type="mcm" slot="1">
+	<object file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table" />
+	<network sync="spawn"/>
+	<dependencies>
+    	<depends_on effect="effects/particles/dest/sparks_lamp_dest" />
+		<depends_on effect="effects/payday2/particles/flares/indoor_lamp_small" />
+		<depends_on bnk="soundbanks/regular_sfx" />
+    </dependencies>
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+		<extension name="damage" class="UnitDamage" />
+	</extensions>
+</unit>
+
+

@@ -1,0 +1,12 @@
+<materials version="3">
+    <material render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" name="mat_lamp" version="2">
+        <diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_lamp_table_a/chl_prop_livingroom_lamp_table_a_df" mip="1"/>
+        <bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_lamp_table_a/chl_prop_livingroom_lamp_table_a_nm" mip="3"/>
+        <reflection_texture type="cubemap" file="environments/cubemaps/cubemap_steel"/>
+    </material>
+    <material render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" name="mat_lamp_lod" version="2">
+        <diffuse_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_lamp_table_a/chl_prop_livingroom_lamp_table_a_df" mip="1"/>
+        <bump_normal_texture file="units/pd2_dlc_chill/props/chl_prop_livingroom_lamp_table_a/chl_prop_livingroom_lamp_table_a_nm" mip="3"/>
+    </material>
+    <material render_template="shadow_caster_only" name="shadow_caster" version="2"/>
+</materials>

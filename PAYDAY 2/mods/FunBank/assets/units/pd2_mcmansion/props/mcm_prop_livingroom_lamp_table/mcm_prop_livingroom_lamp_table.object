@@ -1,0 +1,41 @@
+<dynamic_object>
+	<diesel materials="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table_on" orientation_object="rp_mcm_prop_livingroom_lamp_table" />
+	<sequence_manager file="units/pd2_mcmansion/props/mcm_prop_livingroom_lamp_table/mcm_prop_livingroom_lamp_table" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mcm_prop_livingroom_lamp_table" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+			<object name="c_box_02" collision_type="box" padding="-2.5" />
+			<object name="c_box_03" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+
+	<decal_surfaces default_material="tile">
+		<decal_mesh name="dm_cloth" enabled="true" material="cloth" />
+		<decal_mesh name="dm_metal" enabled="true" material="tile" />
+	</decal_surfaces>
+
+	<effects>
+		<effect_spawner name="indoor_lamp_small" enabled="true" object="e_effect" effect="effects/payday2/particles/flares/indoor_lamp_small" />
+    </effects>
+
+	<graphics>
+		<graphic_group name="grp_clean" enabled="true">
+			<lod_object name="grp_lod_g_lamp_table">
+				<object name="g_lamp_table_lod0" enabled="true" max_distance="800" />
+				<object name="g_lamp_table_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+		<graphic_group name="grp_dmg" enabled="false">
+			<lod_object name="grp_lod_g_dmg_lamp_table">
+				<object name="g_dmg_lamp_table_lod0" enabled="true" max_distance="800" />
+				<object name="g_dmg_lamp_table_lod1" enabled="true" />
+			</lod_object>
+		</graphic_group>
+	</graphics>
+
+	<lights>
+		<light name="li_table_lamp" enabled="true" editable="true" type="omni|specular" multiplier="0.6" far_range="350" falloff="4" intensity="identity" />
+	</lights>
+
+</dynamic_object>

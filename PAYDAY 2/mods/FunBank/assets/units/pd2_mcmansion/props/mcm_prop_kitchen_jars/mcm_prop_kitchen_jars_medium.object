@@ -1,0 +1,55 @@
+<dynamic_object>
+	<diesel materials="units/pd2_mcmansion/props/mcm_prop_kitchen_jars/mcm_prop_kitchen_jars_big" orientation_object="rp_mcm_prop_kitchen_jars_medium" />
+	<sequence_manager file="units/pd2_mcmansion/props/mcm_prop_kitchen_jars/mcm_prop_kitchen_jars_medium" />
+	<bodies>
+		<body name="static_body" enabled="true" template="static">
+			<object name="rp_mcm_prop_kitchen_jars_medium" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+		<body name="dynamic_body_01" enabled="false" template="dynamic">
+			<object name="e_debris_01" />
+			<object name="c_convex_dmg_01" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_01" />
+		</body>
+		<body name="dynamic_body_02" enabled="false" template="dynamic">
+			<object name="e_debris_02" />
+			<object name="c_convex_dmg_02" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_02" />
+		</body>
+		<body name="dynamic_body_03" enabled="false" template="dynamic">
+			<object name="e_debris_03" />
+			<object name="c_convex_dmg_03" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_03" />
+		</body>
+		<body name="dynamic_body_04" enabled="false" template="dynamic">
+			<object name="e_debris_04" />
+			<object name="c_convex_dmg_04" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_04" />
+		</body>
+		<body name="dynamic_body_05" enabled="false" template="dynamic">
+			<object name="e_debris_05" />
+			<object name="c_convex_dmg_05" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_05" />
+		</body>
+		<body name="dynamic_body_06" enabled="false" template="dynamic">
+			<object name="e_debris_06" />
+			<object name="c_convex_dmg_06" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_06" />
+		</body>
+		<body name="dynamic_body_07" enabled="false" template="dynamic">
+			<object name="e_debris_07" />
+			<object name="c_convex_dmg_08" collision_type="convex" padding="-2.5" />
+			<object name="g_dmg_07" />
+		</body>
+	</bodies>
+	<graphics>
+		<object name="g_g" enabled="true" />
+		<object name="g_dmg_01" enabled="false" />
+		<object name="g_dmg_02" enabled="false" />
+		<object name="g_dmg_03" enabled="false" />
+		<object name="g_dmg_04" enabled="false" />
+		<object name="g_dmg_05" enabled="false" />
+		<object name="g_dmg_06" enabled="false" />
+		<object name="g_dmg_07" enabled="false" />
+	</graphics>
+</dynamic_object>

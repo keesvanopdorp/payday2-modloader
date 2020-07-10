@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<unit type="res" slot="1">
+	<object file="units/payday2/props/res_prop_livingroom_coffeetable_a_worn_clean/res_prop_livingroom_coffeetable_a_worn_clean" />
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+	</extensions>
+</unit>

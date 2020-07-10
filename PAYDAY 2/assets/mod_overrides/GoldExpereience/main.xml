@@ -1,0 +1,22 @@
+<table name="Gold Experience Mask">
+
+    <Localization directory="Localization" default="english.txt">
+    </Localization>
+     
+    <GlobalValue id="gea" color="Color(1, 0.5, 0)"/>
+     
+    <Mask id="gea" unit="units/mods/masks/msk_gea/msk_gea" texture_bundle_folder="mods" global_value="gea" type="helmet" />
+    
+    <AddFiles directory="assets">    
+        <cooked_physics path="units/mods/masks/msk_gea/msk_gea"/>
+        <model path="units/mods/masks/msk_gea/msk_gea"/>
+        <object path="units/mods/masks/msk_gea/msk_gea"/>
+        <unit path="units/mods/masks/msk_gea/msk_gea"/>
+        <material_config path="units/mods/masks/msk_gea/msk_gea"/>
+        
+        <texture path="units/mods/masks/msk_gea/msk_gea_df"/>
+        <texture path="units/mods/masks/msk_gea/msk_gea_nm"/>
+        <texture path="guis/dlcs/mods/textures/pd2/blackmarket/icons/masks/gea"/>
+        
+    </AddFiles>
+</table>

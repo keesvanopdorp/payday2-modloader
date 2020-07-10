@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_hector_morales/characters/fps_hector_morales/fps_hector_morales" orientation_object="root_point" />
+	<graphics>
+    <graphic_group name="character" enabled="true" culling_object="g_body">
+         <object name="g_body_lod0" enabled="true"/>
+         <object name="g_head_lod0" enabled="false"/> 
+         <object name="s_body" enabled="true" shadow_caster="false"/>
+
+	
+    </graphic_group>
+</graphics>
+
+
+
+</dynamic_object>

@@ -1,0 +1,39 @@
+{	
+	"name" : "BL2HUD(WTF Am I Doing Edition)",
+	"description": "Borderlands 2 themed HUD for Payday 2",
+	"author" : "LohaTrons",
+	"contact" : "http://steamcommunity.com/id/lohatrons",
+	"version" : "3.007"
+	"libraries" : [
+        {
+            "display_name" : "BeardLib",
+            "identifier" : "beardlib",
+            "optional" : "false"
+        }
+    ]
+	"updates" : [
+		{
+			"identifier" : "bl2hud",
+		},
+		{
+			"identifier" : "bl2hudassets",
+			"install_dir" : "assets/mod_overrides/",
+			"install_folder" : "BL2HUD",
+			"display_name" : "BL2HUD Assets"
+		}
+	]
+	"blt_version" : 2,
+	"image" : "bl2.png",
+	"color" : "1 0.88 0.05",
+	"hooks" :[ 
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"BL2Team.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"BL2Objectives.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"BL2Downed.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"Manager.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"WaitPrompt.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"BL2Chat.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"BL2Hint.lua"},
+			{"hook_id":"lib/managers/hudmanagerpd2", "script_path":"BL2Carry.lua"},
+			{"hook_id":"lib/managers/menumanager", "script_path":"menu/BL2Menu.lua"}
+		]
+}

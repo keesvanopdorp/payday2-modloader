@@ -1,0 +1,16 @@
+{
+		"menu_id" : "bl_menu_temp_id",
+		"parent_menu_id" : "bl_menu_id",
+		"title" : "bl_menu_temp",
+		"description" : "bl_menu_temp_desc",
+		"items" : [	
+		{	
+			"type" : "toggle",
+			"id" : "bl_hide_presenter",
+			"title" : "bl_hide_presenter",
+			"description" : "bl_hide_presenter_desc",
+			"callback" : "callback_bl_hide_presenter",
+			"value" : "hide_presenter",
+		}
+	]
+}

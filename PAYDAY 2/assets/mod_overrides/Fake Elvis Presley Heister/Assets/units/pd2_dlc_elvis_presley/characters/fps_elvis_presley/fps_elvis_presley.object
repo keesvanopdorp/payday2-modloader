@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_elvis_presley/characters/fps_elvis_presley/fps_elvis_presley" orientation_object="root_point" />
+	<graphics>
+    <graphic_group name="character" enabled="true" culling_object="g_body">
+         <object name="g_body" enabled="true"/>
+         <object name="g_head" enabled="false"/> 
+         <object name="s_body" enabled="true" shadow_caster="false"/>
+
+	
+    </graphic_group>
+</graphics>
+
+
+
+</dynamic_object>

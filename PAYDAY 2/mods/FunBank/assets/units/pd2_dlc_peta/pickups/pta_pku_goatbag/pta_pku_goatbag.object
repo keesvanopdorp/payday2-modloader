@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_peta/pickups/pta_pku_goatbag/pta_pku_goatbag" orientation_object="rp_pta_pku_goatbag" />
+	<sequence_manager file="units/pd2_dlc_peta/pickups/pta_pku_goatbag/pta_pku_goatbag" />
+		
+	<bodies>
+		<body name="rag_Tongue_03" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.6" ang_damping="20" collides_with="0" tag="bag" restitution="0">
+			<object name="Tongue_03" />
+			<object collision_type="capsule" mass="4" padding="-2.5" name="c_capsule_Tongue_03"/>
+		</body>
+
+		<body name="rag_Tongue_04" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.6" ang_damping="20" collides_with="0" tag="bag" restitution="0">
+			<object name="Tongue_04" />
+			<object collision_type="capsule" mass="4" padding="-2.5" name="c_capsule_Tongue_04"/>
+		</body>
+
+		<body name="rag_Head" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.6" ang_damping="20" collides_with="0" tag="bag" restitution="0">
+			<object name="Head" />
+			<object collision_type="capsule" mass="4" padding="-2.5" name="c_capsule_head_ragdoll"/>
+		</body>
+
+		<body name="rag_Neck" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.6" ang_damping="20" collides_with="0" tag="bag" restitution="0">
+			<object name="Neck" />
+			<object collision_type="capsule" mass="4" padding="-5" name="c_capsule_Neck"/>
+		</body>
+
+		<body name="rag_Hips" enabled="true" template="corpse" friction="0.6" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="large" ray="block" lin_damping="0.4" ang_damping="20" collision_group="1" collides_with="0" tag="bag" restitution="0">
+			<object name="Hips" />
+			<object collision_type="sphere" mass="22" padding="-13" name="c_sphere_Hips" />
+		</body>
+
+		 <body name="hinge_body_1" enabled="true" template="corpse" friction="0.6" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="large" ray="block" lin_damping="0.4" ang_damping="20" collision_group="8" collides_with="4 6" tag="bag" restitution="0" enter_water_script_tag="medium">
+			<object name="rp_pta_pku_goatbag" />
+			<object collision_type="sphere" mass="18" padding="-13" name="c_sphere_Spine1" />
+		</body>
+
+		<body name="rag_Spine2" enabled="true" template="corpse" friction="0.6" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="large" ray="block" lin_damping="0.4" ang_damping="20" collision_group="8" collides_with="4 6" tag="bag" restitution="0" enter_water_script_tag="medium">
+			<object name="Spine2" />
+			<object collision_type="sphere" mass="17" padding="-13" name="c_sphere_Spine2" />
+		</body>
+
+		<body name="rag_Front_Thigh_L" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.4" ang_damping="20" collision_group="20" collides_with="30" tag="bag" restitution="0">
+			<object name="Front_Thigh_L" />
+			<object collision_type="capsule" mass="22" padding="-5" name="c_capsule_Front_Thigh_L" />
+		</body>
+
+		<body name="rag_Front_Thigh_R" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.4" ang_damping="20" collision_group="30" collides_with="20" tag="bag" restitution="0">
+			<object name="Front_Thigh_R" />
+			<object collision_type="capsule" mass="22" padding="-5" name="c_capsule_Front_Thigh_R" />
+		</body>
+
+		<body name="rag_Front_Calf_L" enabled="true" template="corpse" friction="0.03" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="1" ang_damping="20" collision_group="21" collides_with="31" tag="bag" restitution="0">
+			<object name="Front_Calf_L" />
+			<object collision_type="capsule" mass="6" padding="-5" name="c_capsule_Front_Calf_L" />
+		</body>
+
+		<body name="rag_Front_Calf_R" enabled="true" template="corpse" friction="0.03" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="1" ang_damping="20" collision_group="31" collides_with="21" tag="bag" restitution="0">
+			<object name="Front_Calf_R" />
+			<object collision_type="capsule" mass="6" padding="-5" name="c_capsule_Front_Calf_R" />
+		</body>
+
+		<body name="rag_Back_Calf_R" enabled="true" template="corpse" friction="0.02" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0" ang_damping="20" collision_group="4" collides_with="8" tag="bag" restitution="0">
+			<object name="Back_Calf_R" />
+			<object collision_type="capsule" mass="3" padding="-5" name="c_capsule_Back_Calf_R" />
+		</body>
+
+		<body name="rag_Back_Calf_L" enabled="true" template="corpse" friction="0.02" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0" ang_damping="20" collision_group="6" collides_with="8" tag="bag" restitution="0">
+			<object name="Back_Calf_L" />
+			<object collision_type="capsule" mass="3" padding="-5" name="c_capsule_Back_Calf_L" />
+		</body>
+
+		<body name="rag_Back_Foot_R" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.4" ang_damping="20" collides_with="1" tag="bag" restitution="0">
+			<object name="Back_Foot_R" />
+			<object collision_type="capsule" mass="4" padding="-5" name="c_capsule_Back_Foot_R" />
+		</body>
+
+		<body name="rag_Back_Foot_L" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.4" ang_damping="20" collides_with="1" tag="bag" restitution="0">
+			<object name="Back_Foot_L" />
+			<object collision_type="capsule" mass="4" padding="-5" name="c_capsule_Back_Foot_L" />
+		</body>
+
+		<body name="rag_Back_Tie" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.4" ang_damping="20" collides_with="1" tag="bag" restitution="0">
+			<object name="Back_Tie" />
+			<object collision_type="capsule" mass="4" padding="-5" name="c_sphere_Back_Tie" />
+		</body>
+
+		<body name="rag_Front_Tie" enabled="true" template="corpse" friction="0.01" sweep="true" collision_class="bag" keyframed="false" collision_script_quiet_time="0.5" collision_script_tag="small" ray="block" lin_damping="0.4" ang_damping="20" collides_with="1" tag="bag" restitution="0">
+			<object name="Front_Tie" />
+			<object collision_type="capsule" mass="4" padding="-5" name="c_sphere_Front_Tie" />
+		</body>
+	</bodies>
+
+	<constraints>
+		<constraint type="ragdoll" name="Back_Tie_1" enabled="true">
+			<param body_a="rag_Back_Foot_L" body_b="rag_Back_Tie"/>
+			<param pivot="position:Back_Tie"/>
+			<param twist_axis="yaxis:Back_Tie" twist_min="-60" twist_max="70" twist_freedom="20"/><!-- X axis -->
+			<param plane_axis="xaxis:Back_Tie"/><!-- Y axis -->
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Back_Tie_2" enabled="true">
+			<param body_a="rag_Back_Foot_R" body_b="rag_Back_Tie"/>
+			<param pivot="position:Back_Tie"/>
+			<param twist_axis="yaxis:Back_Tie" twist_min="-60" twist_max="70" twist_freedom="20"/><!-- X axis -->
+			<param plane_axis="xaxis:Back_Tie"/><!-- Y axis -->
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Front_Tie_1" enabled="true">
+			<param body_a="rag_Front_Calf_L" body_b="rag_Front_Tie"/>
+			<param pivot="position:Front_Tie"/>
+			<param twist_axis="yaxis:Front_Tie" twist_min="-60" twist_max="70" twist_freedom="20"/><!-- X axis -->
+			<param plane_axis="xaxis:Front_Tie"/><!-- Y axis -->
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Front_Tie_2" enabled="true">
+			<param body_a="rag_Front_Calf_R" body_b="rag_Front_Tie"/>
+			<param pivot="position:Front_Tie"/>
+			<param twist_axis="yaxis:Front_Tie" twist_min="-10" twist_max="10" twist_freedom="20"/><!-- X axis -->
+			<param plane_axis="xaxis:Front_Tie"/><!-- Y axis -->
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Back_Calf_R" enabled="true">
+			<param body_a="rag_Hips" body_b="rag_Back_Calf_R"/>
+			<param pivot="position:Back_Calf_R"/>
+			<param twist_axis="yaxis:Back_Calf_R" twist_min="-10" twist_max="10" twist_freedom="20"/><!-- X axis -->
+			<param plane_axis="xaxis:Back_Calf_R"/><!-- Y axis -->
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Back_Calf_L" enabled="true">
+			<param body_a="rag_Hips" body_b="rag_Back_Calf_L"/>
+			<param pivot="position:Back_Calf_L"/>
+			<param twist_axis="yaxis:Back_Calf_L" twist_min="-10" twist_max="10" twist_freedom="20"/>
+			<param plane_axis="xaxis:Back_Calf_L"/>
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="rp_pta_pku_goatbag" enabled="true">
+			<param body_b="hinge_body_1" body_a="rag_Hips" />
+			<param pivot="position:rp_pta_pku_goatbag"/>
+			<param twist_axis="yaxis:rp_pta_pku_goatbag" twist_min="-2" twist_max="5" twist_freedom="5"/> <!-- Y axis -->
+			<param plane_axis="xaxis:rp_pta_pku_goatbag"/>
+			<param cone_y="5" cone_z="5" cone_freedom="5"/> <!-- X axis --> <!-- Z axis -->
+			<param damping="1" spring_constant="600" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Spine2" enabled="true">
+			<param body_b="hinge_body_1" body_a="rag_Spine2"/>
+			<param pivot="position:Spine2"/>
+			<param twist_axis="yaxis:Spine2" twist_min="-2" twist_max="5" twist_freedom="5"/> <!-- Y axis -->
+			<param plane_axis="xaxis:Spine2"/>
+			<param cone_y="5" cone_z="5" cone_freedom="5"/> <!-- X axis --> <!-- Z axis = Twist Spine -->
+			<param damping="1" spring_constant="600" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Neck" enabled="true">
+			<param body_b="rag_Neck" body_a="rag_Spine2"/>
+			<param pivot="position:Neck"/>
+			<param twist_axis="yaxis:Neck" twist_min="-20" twist_max="30" twist_freedom="40"/> <!-- Y axis -->
+			<param plane_axis="xaxis:Neck"/>
+			<param cone_y="25" cone_z="25" cone_freedom="3"/> <!-- X axis --> <!-- Z axis -->
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Head" enabled="true">
+			<param body_b="rag_Head" body_a="rag_Neck"/>
+			<param pivot="position:Head"/>
+			<param twist_axis="yaxis:Head" twist_min="-20" twist_max="40" twist_freedom="40"/> <!-- Y axis -->
+			<param plane_axis="xaxis:Head"/>
+			<param cone_y="25" cone_z="25" cone_freedom="3"/> <!-- X axis --> <!-- Z axis -->
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Tongue_03" enabled="true">
+			<param body_b="rag_Tongue_03" body_a="rag_Head"/>
+			<param pivot="position:Tongue_03"/>
+			<param twist_axis="yaxis:Tongue_03" twist_min="-100" twist_max="100" twist_freedom="100"/> <!-- Y axis -->
+			<param plane_axis="xaxis:Tongue_03"/>
+			<param cone_y="60" cone_z="60" cone_freedom="30"/> <!-- X axis --> <!-- Z axis -->
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Tongue_04" enabled="true">
+			<param body_b="rag_Tongue_04" body_a="rag_Tongue_03"/>
+			<param pivot="position:Tongue_04"/>
+			<param twist_axis="yaxis:Tongue_04" twist_min="-100" twist_max="100" twist_freedom="100"/> <!-- Y axis -->
+			<param plane_axis="xaxis:Tongue_04"/>
+			<param cone_y="60" cone_z="60" cone_freedom="30"/> <!-- X axis --> <!-- Z axis -->
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Front_Thigh_R" enabled="true">
+			<param body_a="rag_Spine2" body_b="rag_Front_Thigh_R"/>
+			<param pivot="position:Front_Thigh_R"/>
+			<param twist_axis="yaxis:Front_Thigh_R" twist_min="-10" twist_max="40" twist_freedom="20"/>
+			<param plane_axis="xaxis:Front_Thigh_R"/>
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="ragdoll" name="Front_Thigh_L" enabled="true">
+			<param body_a="rag_Spine2" body_b="rag_Front_Thigh_L"/>
+			<param pivot="position:Front_Thigh_L"/>
+			<param twist_axis="yaxis:Front_Thigh_L" twist_min="-10" twist_max="40" twist_freedom="20"/>
+			<param plane_axis="xaxis:Front_Thigh_L"/>
+			<param cone_y="35" cone_z="40" cone_freedom="10"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="limited_hinge" name="Front_Calf_R" enabled="true">
+			<param body_a="rag_Front_Thigh_R" body_b="rag_Front_Calf_R"/>
+			<param pivot="position:Front_Calf_R"/>
+			<param min_angle="-70" max_angle="30" axis="yaxis:Front_Calf_R" twist_freedom="5"/>
+			<param plane_axis="xaxis:Front_Calf_R"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="limited_hinge" name="Front_Calf_L" enabled="true">
+			<param body_a="rag_Front_Thigh_L" body_b="rag_Front_Calf_L"/>
+			<param pivot="position:Front_Calf_L"/>
+			<param min_angle="-70" max_angle="30" axis="yaxis:Front_Calf_L" twist_freedom="5"/>
+			<param plane_axis="xaxis:Front_Calf_L"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="limited_hinge" name="Back_Foot_R" enabled="true">
+			<param body_a="rag_Back_Calf_R" body_b="rag_Back_Foot_R"/>
+			<param pivot="position:Back_Foot_R"/>
+			<param min_angle="-70" max_angle="30" axis="yaxis:Back_Foot_R" twist_freedom="5"/>
+			<param plane_axis="xaxis:Back_Foot_R"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+
+		<constraint type="limited_hinge" name="Back_Foot_L" enabled="true">
+			<param body_a="rag_Back_Calf_L" body_b="rag_Back_Foot_L"/>
+			<param pivot="position:Back_Foot_L"/>
+			<param min_angle="-70" max_angle="30" axis="yaxis:Back_Foot_L" twist_freedom="5"/>
+			<param plane_axis="xaxis:Back_Foot_L"/>
+			<param damping="1" spring_constant="200" min_restitution="0"/>
+		</constraint>
+	</constraints>
+	
+	<decal_surfaces default_material="flesh" />
+
+	<graphics>
+		<object name="g_goat" enabled="true" shadow_caster="false" />
+	</graphics>
+
+</dynamic_object>

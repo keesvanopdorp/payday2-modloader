@@ -1,0 +1,83 @@
+{
+    "menu_id": "bai_captain_box_menu",
+    "parent_menu" : "bai_menu",
+    "title" : "bai_captain_box",
+    "items": [
+        {
+            "type" : "color_select",
+            "id" : "bai_captain_color_select_choice",
+            "title" : "bai_captain_box",
+            "description" : "",
+            "value" : "captain",
+            "default_value" : [255, 128, 0],
+            "callback" : "SetNormalColor",
+            "callback_arguments" : "captain",
+            "texture" : "padlock"
+        },
+        {
+            "type": "divider",
+            "size": 32
+        },
+        {
+            "type" : "color_select",
+            "id" : "bai_captain_color_mutated_select_choice",
+            "title" : "bai_captain_box_mutated",
+            "description" : "",
+            "value" : "captain_mutated",
+            "default_value" : [255, 133, 225],
+            "callback" : "SetNormalColor",
+            "callback_arguments" : "captain_mutated",
+            "texture" : "padlock"
+        },
+        {
+            "type": "divider",
+            "size": 48
+        },
+        {
+            "type": "toggle",
+            "id" : "bai_hide_hostage_panel_during_captain_choice",
+            "title" : "bai_hide_hostage_panel",
+            "description" : "bai_hide_hostage_panel_captain_desc",
+            "callback" : "HideHostagePanel",
+            "callback_arguments" : "captain",
+            "value" : "hide_hostage_panel",
+            "default_value" : true
+        },
+        {
+            "type" : "divider",
+            "size" : 32
+        },
+        {
+            "type" : "label",
+            "title" : "bai_custom_text"
+        },
+        {
+            "type" : "input",
+            "id" : "bai_captain_box_custom_text_input_choice",
+            "title" : "bai_custom_text_input",
+            "description" : "bai_custom_text_input_desc",
+            "callback" : "SetCustomText",
+            "callback_arguments" : "captain",
+            "value": "custom_text",
+            "default_value" : ""
+        },
+        {
+            "type": "divider",
+            "size": 32
+        },
+        {
+            "type" : "label",
+            "title" : "bai_custom_text_short"
+        },
+        {
+            "type" : "input",
+            "id" : "bai_captain_box_custom_text_short_input_choice",
+            "title" : "bai_custom_text_input",
+            "description" : "bai_custom_text_input_short_desc",
+            "callback" : "SetCustomShortText",
+            "callback_arguments" : "captain",
+            "value": "short_custom_text",
+            "default_value" : ""
+        }
+    ]
+}
