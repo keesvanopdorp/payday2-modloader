@@ -1,7 +1,7 @@
 {
   "name": "payday2-modloader",
-  "version": "0.2",
-  "description": "This is a modloader / modmanager made with vue and electron",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

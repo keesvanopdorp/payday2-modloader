@@ -40,7 +40,7 @@ export default Vue.extend({
       gamedir: "" as string,
       mods: [] as string[],
       modsOverides: [] as string[],
-      modsFolder: "" as string,
+      modFolder: "" as string,
       modsOveridesFolder: "" as string,
       filters: ["logs", "saves", "downloads"],
       dragging: false,
@@ -51,12 +51,13 @@ export default Vue.extend({
   },
   async created() {
     this.getConfig();
+    this.getMods();
     this.$on("add mod", async (data: any) => {
       this.dragFilePath = data.dragFilePath;
       this.dragging = data.dragging;
       this.modType = data.modType;
       const path =
-        this.modType === "mod" ? this.modsFolder : this.modsOveridesFolder;
+        this.modType === "mod" ? this.modFolder : this.modsOveridesFolder;
       try {
         await extract(this.dragFilePath, { dir: path });
       } catch (e) {
@@ -69,7 +70,7 @@ export default Vue.extend({
       this.dragging = data.dragging;
     });
 
-    this.$on("delete mod", (data: any) => {
+   this.$on("delete mod", (data: any) => {
       this.deleteMod(data.mod, data.modType);
     });
   },
@@ -81,46 +82,40 @@ export default Vue.extend({
         this.dragging = true;
       }
     },
-    async getConfig(): Promise<void> {
+    getConfig() {
       this.configPath = path.join(
         remote.app.getPath("userData"),
         "config.json"
       );
       if (!fs.existsSync(this.configPath)) {
-        const path = await remote.dialog.showOpenDialog({
-          properties: ["openDirectory"]
-        });
-        fs.writeFileSync(
-          this.configPath,
-          JSON.stringify({ gamedir: path.filePaths[0] })
-        );
-        this.gamedir = path.filePaths[0];
+        remote.dialog
+          .showOpenDialog({
+            properties: ["openDirectory"]
+          })
+          .then(object => {
+            const path = object.filePaths[0];
+            fs.writeFileSync(
+              this.configPath,
+              JSON.stringify({ gamedir: path })
+            );
+            this.gamedir = path;
+          });
       } else {
         const { gamedir } = JSON.parse(
           fs.readFileSync(this.configPath, { encoding: "utf-8" })
         );
         this.gamedir = gamedir;
       }
-      this.modsFolder = path.join(this.gamedir, "mods");
+      this.modFolder = path.join(this.gamedir, "mods");
       this.modsOveridesFolder = path.join(
         this.gamedir,
         "assets",
         "mod_overrides"
       );
-      this.getMods();
     },
     getMods(): void {
-      console.log(this.modsFolder);
-      try{
-        this.mods = fs.readdirSync(this.modsFolder) as string[];
-      } catch (e) {
-        fs.mkdirSync(this.modsFolder);
-      }
-      try{
-        this.modsOverides = fs.readdirSync(this.modsOveridesFolder) as string[];
-      } catch (e) {
-        fs.mkdirSync(this.modsOveridesFolder);
-      }
+      this.mods = fs.readdirSync(this.modFolder) as string[];
+      this.modsOverides = fs.readdirSync(this.modsOveridesFolder) as string[];
       this.filters.forEach(filter => {
         if (this.mods.includes(filter)) {
           this.mods.splice(this.mods.indexOf(filter), 1);
@@ -129,7 +124,7 @@ export default Vue.extend({
     },
     deleteMod(mod: string, modType: string): void {
       const path = `${
-        modType === "mod" ? this.modsFolder : this.modsOveridesFolder
+        modType === "mod" ? this.modFolder : this.modsOveridesFolder
       }\\${mod}`;
       try {
         fs.rmdirSync(path, { recursive: true });
