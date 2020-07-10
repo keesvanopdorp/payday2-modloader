@@ -1,32 +1,153 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div
+    id="app"
+    @dragover="dragOver"
+    :class="dragging === true ? 'dragging' : null"
+  >
     <router-view />
+    <ModList :mods="mods" :type="String('mods')" />
+    <ModList :mods="modsOverides" :type="String('mods_overrides')" />
+    <div class="alert-alert-success" v-if="this.message.length > 0">
+      {{ this.message }}
+    </div>
+    <DragAndDrop v-if="this.dragging" :filePath="this.dragFilePath" />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import Vue from "vue";
+import router from "@/router";
+import store from "@/store";
+import fs from "fs";
+import path from "path";
+import extract from "extract-zip";
+import { remote } from "electron";
+import ModList from "@/components/ModList.vue";
+import "../node_modules/bootstrap/dist/js/bootstrap";
+import DragAndDrop from "@/components/DragAndDrop.vue";
 
-#nav {
-  padding: 30px;
+export default Vue.extend({
+  components: {
+    ModList,
+    DragAndDrop
+  },
+  store,
+  router,
+  data: () => {
+    return {
+      appName: "payday2-modloader" as string,
+      configPath: "" as string,
+      gamedir: "" as string,
+      mods: [] as string[],
+      modsOverides: [] as string[],
+      modFolder: "" as string,
+      modsOveridesFolder: "" as string,
+      filters: ["logs", "saves", "downloads"],
+      dragging: false,
+      dragFilePath: "",
+      modType: "",
+      message: ""
+    };
+  },
+  created() {
+    this.getConfig();
+    this.getMods();
+    this.$on("add mod", async (data: any) => {
+      this.dragFilePath = data.dragFilePath;
+      this.dragging = data.dragging;
+      this.modType = data.modType;
+      const path =
+        this.modType === "mod" ? this.modFolder : this.modsOveridesFolder;
+      try {
+        await extract(this.dragFilePath, { dir: path });
+      } catch (e) {
+        console.error(e);
+      }
+      this.message = "Added mod";
+      this.getMods();
+    });
+    this.$on("close-dragging", (data: any) => {
+      this.dragging = data.dragging;
+    });
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+   this.$on("delete mod", (data: any) => {
+      console.log(data);
+      // this.deleteMod(data.mod, data.modType);
+    });
+  },
+  methods: {
+    dragOver(event: Event) {
+      event.preventDefault();
+      console.log("drag over");
+      if (!this.dragging) {
+        this.dragging = true;
+      }
+    },
+    getConfig(): void {
+      this.configPath = path.join(
+        remote.app.getPath("appData"),
+        this.appName,
+        "config.json"
+      );
+      if (!fs.existsSync(this.configPath)) {
+        remote.dialog
+          .showOpenDialog({
+            properties: ["openDirectory"]
+          })
+          .then(object => {
+            const path = object.filePaths[0];
+            fs.writeFileSync(
+              this.configPath,
+              JSON.stringify({ gamedir: path })
+            );
+            this.gamedir = path;
+          });
+      } else {
+        const { gamedir } = JSON.parse(
+          fs.readFileSync(this.configPath, { encoding: "utf-8" })
+        );
+        this.gamedir = gamedir;
+      }
+      this.modFolder = path.join(this.gamedir, "mods");
+      this.modsOveridesFolder = path.join(
+        this.gamedir,
+        "assets",
+        "mod_overrides"
+      );
+    },
+    getMods(): void {
+      this.mods = fs.readdirSync(this.modFolder) as string[];
+      this.modsOverides = fs.readdirSync(this.modsOveridesFolder) as string[];
+      this.filters.forEach(filter => {
+        if (this.mods.includes(filter)) {
+          this.mods.splice(this.mods.indexOf(filter), 1);
+        }
+      });
+    },
+    deleteMod(mod: string, modType: string): void {
+      const path = `${
+        modType === "mod" ? this.modFolder : this.modsOveridesFolder
+      }\\${mod}`;
+      try {
+        fs.rmdirSync(path, { recursive: true });
+      } catch (e) {
+        console.error(e);
+      }
+      this.getMods();
     }
   }
+});
+</script>
+<style lang="scss">
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+body {
+  overflow-x: hidden;
+}
+#app {
+  overflow-x: hidden;
+}
+.dragging {
+  overflow-y: hidden;
 }
 </style>
