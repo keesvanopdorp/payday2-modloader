@@ -51,7 +51,6 @@ export default Vue.extend({
   },
   async created() {
     this.getConfig();
-    this.getMods();
     this.$on("add mod", async (data: any) => {
       this.dragFilePath = data.dragFilePath;
       this.dragging = data.dragging;
@@ -71,7 +70,8 @@ export default Vue.extend({
     });
 
    this.$on("delete mod", (data: any) => {
-      this.deleteMod(data.mod, data.modType);
+      console.log(data);
+      // this.deleteMod(data.mod, data.modType);
     });
   },
   methods: {
@@ -82,24 +82,22 @@ export default Vue.extend({
         this.dragging = true;
       }
     },
-    getConfig() {
+    async getConfig() {
       this.configPath = path.join(
         remote.app.getPath("userData"),
         "config.json"
       );
       if (!fs.existsSync(this.configPath)) {
-        remote.dialog
+        const fileObject = await remote.dialog
           .showOpenDialog({
             properties: ["openDirectory"]
-          })
-          .then(object => {
-            const path = object.filePaths[0];
-            fs.writeFileSync(
-              this.configPath,
-              JSON.stringify({ gamedir: path })
-            );
-            this.gamedir = path;
           });
+          const path = fileObject.filePaths[0];
+          fs.writeFileSync(
+                  this.configPath,
+                  JSON.stringify({ gamedir:  path})
+          );
+          this.gamedir = path;
       } else {
         const { gamedir } = JSON.parse(
           fs.readFileSync(this.configPath, { encoding: "utf-8" })
@@ -112,6 +110,7 @@ export default Vue.extend({
         "assets",
         "mod_overrides"
       );
+      this.getMods();
     },
     getMods(): void {
       this.mods = fs.readdirSync(this.modFolder) as string[];
