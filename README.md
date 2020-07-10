@@ -10,7 +10,9 @@
 
 4. where is the data stored
 
-4. know issues
+5. know issues
+
+6. disclaimer
 
 ## 1. setup
 
@@ -41,3 +43,7 @@ the data is stored in on windows `%appdata%/payday2-modloader` and on mac
 2. delete function can delete your whole folder 
 
 3. enabling and disabling does work (is a featured that is not implemented)
+
+## 6. disclaimer
+
+use this software on your own risk. always make a update of your payday folder
