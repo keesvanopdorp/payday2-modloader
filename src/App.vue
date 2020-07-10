@@ -71,8 +71,7 @@ export default Vue.extend({
     });
 
    this.$on("delete mod", (data: any) => {
-      console.log(data);
-      // this.deleteMod(data.mod, data.modType);
+      this.deleteMod(data.mod, data.modType);
     });
   },
   methods: {
