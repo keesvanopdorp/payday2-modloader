@@ -1,6 +1,0 @@
-<materials version="3">
-	<material name="mcm_prop_kitchen_jars" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
-		<diffuse_texture file="units/pd2_mcmansion/props/mcm_prop_kitchen_jars/mcm_prop_kitchen_jars_df" />
-		<bump_normal_texture file="units/dev_tools/temp_textures/temp_texture_df" />
-	</material>
-</materials>

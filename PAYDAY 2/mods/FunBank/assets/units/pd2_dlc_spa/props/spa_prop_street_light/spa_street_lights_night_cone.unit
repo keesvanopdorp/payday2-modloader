@@ -1,6 +1,0 @@
-<unit type="spa" slot="1">
-	<object file="units/pd2_dlc_spa/props/spa_prop_street_light/spa_street_lights_night_cone" />
-	<extensions>
-		<extension name="unit_data" class="ScriptUnitData" />
-	</extensions>
-</unit>

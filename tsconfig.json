@@ -6,19 +6,20 @@
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env",
-      "mocha",
-      "chai"
+      "webpack-env"
     ],
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      "@types": ["src/types/index"]
     },
     "lib": [
       "esnext",

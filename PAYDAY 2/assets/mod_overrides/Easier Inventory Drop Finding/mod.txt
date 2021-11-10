@@ -1,5 +1,0 @@
-{
-  "Name": "Easier Inventory Drop finding",
-  "Author": "[DK]TheDvd3000",
-  "Description": "Ive experienced alot of scrolling around finding the newest dropped color for my mask, newest dropped mask etc. This mod kinda "highlights" the 'newdrop' marker, so it'll be easier to locate. Enjoy!"
-}

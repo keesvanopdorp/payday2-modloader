@@ -1,6 +1,0 @@
-<unit type="lxa" slot="1" >
-    <object file="units/payday2/props/lxa_prop_kitchen_stove_fan/lxa_prop_kitchen_stove_fan" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

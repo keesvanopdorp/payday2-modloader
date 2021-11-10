@@ -1,45 +1,44 @@
 "use strict";
-import { app, protocol, BrowserWindow, ipcMain } from "electron";
+
+import { app, protocol, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
-import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
+import installExtension, { VUEJS3_DEVTOOLS } from "electron-devtools-installer";
+import { initialize } from "@electron/remote/main";
 const isDevelopment = process.env.NODE_ENV !== "production";
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-let win: BrowserWindow | null;
+// initialize the remote package to have access to host system
+initialize();
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
-  { scheme: "app", privileges: { secure: true, standard: true } }
+  { scheme: "app", privileges: { secure: true, standard: true } },
 ]);
 
-function createWindow() {
+async function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+      contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
+      enableRemoteModule: true,
+    },
   });
+
+  win.webContents.on("will-navigate", (event) => event.preventDefault());
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
-    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
+    await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string);
     if (!process.env.IS_TEST) win.webContents.openDevTools();
   } else {
     createProtocol("app");
     // Load the index.html when not in development
     win.loadURL("app://./index.html");
   }
-
-  win.webContents.on("will-navigate", event => event.preventDefault());
-
-  win.on("closed", () => {
-    win = null;
-  });
 }
 
 // Quit when all windows are closed.
@@ -54,9 +53,7 @@ app.on("window-all-closed", () => {
 app.on("activate", () => {
   // On macOS it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (win === null) {
-    createWindow();
-  }
+  if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
 
 // This method will be called when Electron has finished
@@ -66,7 +63,7 @@ app.on("ready", async () => {
   if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
     try {
-      await installExtension(VUEJS_DEVTOOLS);
+      await installExtension(VUEJS3_DEVTOOLS);
     } catch (e) {
       console.error("Vue Devtools failed to install:", e.toString());
     }
@@ -77,7 +74,7 @@ app.on("ready", async () => {
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {
   if (process.platform === "win32") {
-    process.on("message", data => {
+    process.on("message", (data) => {
       if (data === "graceful-exit") {
         app.quit();
       }

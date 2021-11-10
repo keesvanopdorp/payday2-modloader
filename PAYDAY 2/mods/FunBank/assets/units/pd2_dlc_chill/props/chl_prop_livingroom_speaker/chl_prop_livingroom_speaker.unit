@@ -1,6 +1,0 @@
-<unit type="chl" slot="1" >
-    <object file="units/pd2_dlc_chill/props/chl_prop_livingroom_speaker/chl_prop_livingroom_speaker" />
-    <extensions>
-        <extension class="ScriptUnitData" name="unit_data" />
-    </extensions>
-</unit>

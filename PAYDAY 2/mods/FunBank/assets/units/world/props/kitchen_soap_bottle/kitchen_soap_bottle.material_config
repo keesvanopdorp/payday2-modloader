@@ -1,5 +1,0 @@
-<materials version="3">
-    <material name="kitchen_soap_bottle" render_template="generic:DIFFUSE_TEXTURE" version="2">
-        <diffuse_texture file="units/world/props/kitchen_soap_bottle/kitchen_soap_bottle_df"/>
-    </material>
-</materials>

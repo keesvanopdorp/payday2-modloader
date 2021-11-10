@@ -1,149 +1,169 @@
 <template>
   <div
-    id="app"
+    v-on:drop="drop"
     @dragover="dragOver"
-    :class="dragging === true ? 'dragging' : null"
+    @drop="drop"
+    @dragenter="dragEnter"
+    @dragleave="dragLeave"
+    :class="dragging ? 'dragging' : null"
   >
-    <router-view />
-    <ModList :mods="mods" :type="String('mods')" />
-    <ModList :mods="modsOverides" :type="String('mods_overrides')" />
-    <div class="alert-alert-success" v-if="this.message.length > 0">
-      {{ this.message }}
+    <div
+      :class="`drag-and-drop ${dragging ? 'd-block' : 'd-none'}`"
+      @drop="drop"
+      v-on:drop="drop"
+    >
+      <input type="file" />
     </div>
-    <DragAndDrop v-if="this.dragging" :filePath="this.dragFilePath" />
+    <div class="row">
+      <div :class="`col-${sidebarExpand ? 2 : 1}`">
+        <Sidebar />
+      </div>
+      <div class="col">
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import router from "@/router";
+import { Options, Vue } from "vue-class-component";
+import Sidebar from "@/components/Sidebar.vue";
 import store from "@/store";
-import fs from "fs";
+import { app, dialog } from "@electron/remote";
+import { existsSync, writeFileSync, readFileSync } from "original-fs";
+import { IConfig } from "./types";
+import { Archive } from "libarchive.js";
+
+Archive.init({
+  workerUrl: "libarchive.js/dist/worker-bundle.js",
+});
 import path from "path";
-import extract from "extract-zip";
-import { remote } from "electron";
-import ModList from "@/components/ModList.vue";
-import "../node_modules/bootstrap/dist/js/bootstrap";
-import DragAndDrop from "@/components/DragAndDrop.vue";
 
-export default Vue.extend({
-  components: {
-    ModList,
-    DragAndDrop
-  },
-  store,
-  router,
-  data: () => {
-    return {
-      appName: "payday2-modloader" as string,
-      configPath: "" as string,
-      gamedir: "" as string,
-      mods: [] as string[],
-      modsOverides: [] as string[],
-      modFolder: "" as string,
-      modsOveridesFolder: "" as string,
-      filters: ["logs", "saves", "downloads"],
-      dragging: false,
-      dragFilePath: "",
-      modType: "",
-      message: ""
-    };
-  },
-  async created() {
+@Options({
+  components: { Sidebar },
+})
+export default class App extends Vue {
+  public config: IConfig | Record<string, never> = {};
+  public configPath = "";
+  public dragging = false;
+
+  async mounted(): Promise<void> {
+    console.log(store.state.config.gameDir);
+    this.config = store.state.config;
+    this.config = store.state.config;
+    store.commit("setApplicationBasePath", app.getPath("userData"));
+    this.configPath = path.join(store.state.applicationBasePath, "config.json");
+
+    store.commit("setConfigPath", this.configPath);
     this.getConfig();
-    this.$on("add mod", async (data: any) => {
-      this.dragFilePath = data.dragFilePath;
-      this.dragging = data.dragging;
-      this.modType = data.modType;
-      const path =
-        this.modType === "mod" ? this.modFolder : this.modsOveridesFolder;
-      try {
-        await extract(this.dragFilePath, { dir: path });
-      } catch (e) {
-        console.error(e);
-      }
-      this.message = "Added mod";
-      this.getMods();
-    });
-    this.$on("close-dragging", (data: any) => {
-      this.dragging = data.dragging;
-    });
+  }
 
-   this.$on("delete mod", (data: any) => {
-      console.log(data);
-      // this.deleteMod(data.mod, data.modType);
-    });
-  },
-  methods: {
-    dragOver(event: Event) {
-      event.preventDefault();
-      console.log("drag over");
-      if (!this.dragging) {
-        this.dragging = true;
-      }
-    },
-    async getConfig() {
-      this.configPath = path.join(
-        remote.app.getPath("userData"),
-        "config.json"
-      );
-      if (!fs.existsSync(this.configPath)) {
-        const fileObject = await remote.dialog
-          .showOpenDialog({
-            properties: ["openDirectory"]
-          });
-          const path = fileObject.filePaths[0];
-          fs.writeFileSync(
-                  this.configPath,
-                  JSON.stringify({ gamedir:  path})
-          );
-          this.gamedir = path;
-      } else {
-        const { gamedir } = JSON.parse(
-          fs.readFileSync(this.configPath, { encoding: "utf-8" })
-        );
-        this.gamedir = gamedir;
-      }
-      this.modFolder = path.join(this.gamedir, "mods");
-      this.modsOveridesFolder = path.join(
-        this.gamedir,
-        "assets",
-        "mod_overrides"
-      );
-      this.getMods();
-    },
-    getMods(): void {
-      this.mods = fs.readdirSync(this.modFolder) as string[];
-      this.modsOverides = fs.readdirSync(this.modsOveridesFolder) as string[];
-      this.filters.forEach(filter => {
-        if (this.mods.includes(filter)) {
-          this.mods.splice(this.mods.indexOf(filter), 1);
-        }
+  async getConfig(): Promise<void> {
+    if (!existsSync(this.configPath)) {
+      // not exists 
+      const fileObject = await dialog.showOpenDialog({
+        message: "Please select the Payday 2 installation directory",
+        properties: ["openDirectory"],
       });
-    },
-    deleteMod(mod: string, modType: string): void {
-      const path = `${
-        modType === "mod" ? this.modFolder : this.modsOveridesFolder
-      }\\${mod}`;
-      try {
-        fs.rmdirSync(path, { recursive: true });
-      } catch (e) {
-        console.error(e);
+      if (!fileObject.canceled) {
+        // dialog is not canceled
+        const path = fileObject.filePaths[0];
+        this.config = {
+          gameDir: path,
+        };
+        writeFileSync(this.configPath, JSON.stringify(this.config, null, "\t"));
+      } else {
+        // diaglog is canceled
+        this.getConfig();
       }
-      this.getMods();
+    } else {
+      // exists
+      this.readConfig();
     }
   }
-});
+
+  readConfig(): void {
+    this.config = JSON.parse(
+      readFileSync(this.configPath, { encoding: "utf8" })
+    );
+    store.commit("setConfig", this.config);
+  }
+
+  dragOver(event: Event): void {
+    console.log("drag over");
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    if (!this.dragging) {
+      this.dragging = true;
+    }
+  }
+
+  dragEnd(event: Event): void {
+    console.log("drag end");
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    if (this.dragging) {
+      this.dragging = false;
+    }
+  }
+
+  dragEnter(event: Event): void {
+    console.log("drag enter");
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }
+
+  dragLeave(event: Event): void {
+    console.log("drag leave");
+    // event.preventDefault();
+    // event.stopImmediatePropagation();
+  }
+
+  drop(event: DragEvent): void {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log(event);
+    console.log(event.target);
+  }
+
+  get sidebarExpand(): boolean {
+    return store.getters.sidebarExpand;
+  }
+}
 </script>
+
 <style lang="scss">
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
 body {
   overflow-x: hidden;
 }
+
 #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
   overflow-x: hidden;
 }
+
+.sidebar {
+  width: 100%;
+  height: 100vh;
+  background-color: $secondary;
+  color: $white;
+}
+
+.drag-and-drop {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .dragging {
   overflow-y: hidden;
 }

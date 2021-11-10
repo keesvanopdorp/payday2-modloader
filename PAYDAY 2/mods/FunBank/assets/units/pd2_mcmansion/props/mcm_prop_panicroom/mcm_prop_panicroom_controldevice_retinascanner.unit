@@ -1,8 +1,0 @@
-<unit type="mcm" slot="1">
-	<object file="units/pd2_mcmansion/props/mcm_prop_panicroom/mcm_prop_panicroom_controldevice_retinascanner" />
-	<network sync="spawn"/>
-	<extensions>
-		<extension name="unit_data" class="ScriptUnitData" />
-		<extension name="damage" class="UnitDamage" />
-	</extensions>
-</unit>
