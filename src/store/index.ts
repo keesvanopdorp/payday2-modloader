@@ -6,6 +6,9 @@ interface State {
   applicationBasePath: string;
   configPath: string;
   sidebarExpand: boolean;
+  modsFolder: string;
+  modOverridesFolder: string;
+  mods: string[];
 }
 
 export default createStore<State>({
@@ -16,6 +19,9 @@ export default createStore<State>({
     applicationBasePath: "",
     configPath: "",
     sidebarExpand: true,
+    modsFolder: "",
+    modOverridesFolder: "",
+    mods: [],
   },
   mutations: {
     setGameDir: (state: State, gameDir: string) => {
@@ -32,6 +38,15 @@ export default createStore<State>({
     },
     setSidebarExpand: (state: State, value: boolean) => {
       state.sidebarExpand = value;
+    },
+    setModFolder: (state: State, modFolder: string) => {
+      state.modsFolder = modFolder;
+    },
+    setModOverridesFolder: (state: State, modFolder: string) => {
+      state.modOverridesFolder = modFolder;
+    },
+    setMods: (state: State, mods: string[]) => {
+      state.mods = mods;
     },
   },
   actions: {},

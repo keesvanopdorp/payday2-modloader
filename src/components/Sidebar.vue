@@ -4,6 +4,11 @@
     <button class="btn btn-primary" v-on:click="sidebarExpand = !sidebarExpand">
       test
     </button>
+    <div class="d-flex flex-column my-5" id="sidebar-nav">
+      <router-link to="/"> Mods </router-link>
+      <router-link to="/"> Mods overrides </router-link>
+      <router-link to="/"> settings </router-link>
+    </div>
   </div>
 </template>
 
@@ -21,3 +26,11 @@ export default class Sidebar extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+#sidebar-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+}
+</style>

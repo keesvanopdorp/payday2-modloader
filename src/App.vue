@@ -19,6 +19,7 @@
         <Sidebar />
       </div>
       <div class="col">
+        <h2 v-for="mod in store.state.mods" :key="mod">{{ mod }}</h2>
         <router-view />
       </div>
     </div>
@@ -30,14 +31,19 @@ import { Options, Vue } from "vue-class-component";
 import Sidebar from "@/components/Sidebar.vue";
 import store from "@/store";
 import { app, dialog } from "@electron/remote";
-import { existsSync, writeFileSync, readFileSync } from "original-fs";
+import {
+  existsSync,
+  writeFileSync,
+  readFileSync,
+  readdirSync,
+} from "original-fs";
 import { IConfig } from "./types";
 import { Archive } from "libarchive.js";
+import path from "path";
 
 Archive.init({
   workerUrl: "libarchive.js/dist/worker-bundle.js",
 });
-import path from "path";
 
 @Options({
   components: { Sidebar },
@@ -46,6 +52,7 @@ export default class App extends Vue {
   public config: IConfig | Record<string, never> = {};
   public configPath = "";
   public dragging = false;
+  public store = store;
 
   async mounted(): Promise<void> {
     console.log(store.state.config.gameDir);
@@ -55,12 +62,13 @@ export default class App extends Vue {
     this.configPath = path.join(store.state.applicationBasePath, "config.json");
 
     store.commit("setConfigPath", this.configPath);
-    this.getConfig();
+    await this.getConfig();
+    this.loadMods();
   }
 
   async getConfig(): Promise<void> {
     if (!existsSync(this.configPath)) {
-      // not exists 
+      // not exists
       const fileObject = await dialog.showOpenDialog({
         message: "Please select the Payday 2 installation directory",
         properties: ["openDirectory"],
@@ -72,6 +80,7 @@ export default class App extends Vue {
           gameDir: path,
         };
         writeFileSync(this.configPath, JSON.stringify(this.config, null, "\t"));
+        this.readConfig();
       } else {
         // diaglog is canceled
         this.getConfig();
@@ -87,6 +96,22 @@ export default class App extends Vue {
       readFileSync(this.configPath, { encoding: "utf8" })
     );
     store.commit("setConfig", this.config);
+    console.log(store.state.config.gameDir);
+    store.commit("setModFolder", path.join(store.state.config.gameDir, "mods"));
+    store.commit(
+      "setModOverridesFolder",
+      path.join(store.state.config.gameDir, "assets", "mod_overrides")
+    );
+  }
+
+  loadMods(): void {
+    console.log(readdirSync(store.state.modsFolder));
+    store.commit(
+      "setMods",
+      readdirSync(store.state.modsFolder, { withFileTypes: true })
+        .filter((dirent) => dirent.isDirectory())
+        .map((dirent) => dirent.name)
+    );
   }
 
   dragOver(event: Event): void {
